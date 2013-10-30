@@ -24,6 +24,8 @@
 		16D6C59818206A020051DCD3 /* Rad_IOS_MapTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D6C59718206A020051DCD3 /* Rad_IOS_MapTestTests.m */; };
 		16D6C5A218206A180051DCD3 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D6C5A118206A180051DCD3 /* AddressBook.framework */; };
 		16D6C5A418206A240051DCD3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D6C5A318206A240051DCD3 /* MapKit.framework */; };
+		16E037BD1821B96E0061E9D1 /* QTRQatarMapOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E037BC1821B96E0061E9D1 /* QTRQatarMapOverlay.m */; };
+		16E037C01821BAB30061E9D1 /* QTRQatarMapOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E037BF1821BAB30061E9D1 /* QTRQatarMapOverlayView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,10 @@
 		16D6C59718206A020051DCD3 /* Rad_IOS_MapTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Rad_IOS_MapTestTests.m; sourceTree = "<group>"; };
 		16D6C5A118206A180051DCD3 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		16D6C5A318206A240051DCD3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		16E037BB1821B96E0061E9D1 /* QTRQatarMapOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTRQatarMapOverlay.h; sourceTree = "<group>"; };
+		16E037BC1821B96E0061E9D1 /* QTRQatarMapOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTRQatarMapOverlay.m; sourceTree = "<group>"; };
+		16E037BE1821BAB30061E9D1 /* QTRQatarMapOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTRQatarMapOverlayView.h; sourceTree = "<group>"; };
+		16E037BF1821BAB30061E9D1 /* QTRQatarMapOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTRQatarMapOverlayView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +136,10 @@
 				16D6C57E18206A020051DCD3 /* Main.storyboard */,
 				16D6C58118206A020051DCD3 /* QTRViewController.h */,
 				16D6C58218206A020051DCD3 /* QTRViewController.m */,
+				16E037BB1821B96E0061E9D1 /* QTRQatarMapOverlay.h */,
+				16E037BC1821B96E0061E9D1 /* QTRQatarMapOverlay.m */,
+				16E037BE1821BAB30061E9D1 /* QTRQatarMapOverlayView.h */,
+				16E037BF1821BAB30061E9D1 /* QTRQatarMapOverlayView.m */,
 				16D6C58418206A020051DCD3 /* Images.xcassets */,
 				16D6C57318206A020051DCD3 /* Supporting Files */,
 			);
@@ -263,9 +273,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16E037BD1821B96E0061E9D1 /* QTRQatarMapOverlay.m in Sources */,
 				16D6C57D18206A020051DCD3 /* QTRAppDelegate.m in Sources */,
 				169B45F01821AB9F00B61B59 /* Qatar.m in Sources */,
 				16D6C58318206A020051DCD3 /* QTRViewController.m in Sources */,
+				16E037C01821BAB30061E9D1 /* QTRQatarMapOverlayView.m in Sources */,
 				16D6C57918206A020051DCD3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
