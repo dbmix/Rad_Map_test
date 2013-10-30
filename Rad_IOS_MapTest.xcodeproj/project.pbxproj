@@ -1,0 +1,488 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16D6C56D18206A020051DCD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D6C56C18206A020051DCD3 /* Foundation.framework */; };
+		16D6C56F18206A020051DCD3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D6C56E18206A020051DCD3 /* CoreGraphics.framework */; };
+		16D6C57118206A020051DCD3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D6C57018206A020051DCD3 /* UIKit.framework */; };
+		16D6C57718206A020051DCD3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 16D6C57518206A020051DCD3 /* InfoPlist.strings */; };
+		16D6C57918206A020051DCD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D6C57818206A020051DCD3 /* main.m */; };
+		16D6C57D18206A020051DCD3 /* QTRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D6C57C18206A020051DCD3 /* QTRAppDelegate.m */; };
+		16D6C58018206A020051DCD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16D6C57E18206A020051DCD3 /* Main.storyboard */; };
+		16D6C58318206A020051DCD3 /* QTRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D6C58218206A020051DCD3 /* QTRViewController.m */; };
+		16D6C58518206A020051DCD3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16D6C58418206A020051DCD3 /* Images.xcassets */; };
+		16D6C58C18206A020051DCD3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D6C58B18206A020051DCD3 /* XCTest.framework */; };
+		16D6C58D18206A020051DCD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D6C56C18206A020051DCD3 /* Foundation.framework */; };
+		16D6C58E18206A020051DCD3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D6C57018206A020051DCD3 /* UIKit.framework */; };
+		16D6C59618206A020051DCD3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 16D6C59418206A020051DCD3 /* InfoPlist.strings */; };
+		16D6C59818206A020051DCD3 /* Rad_IOS_MapTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D6C59718206A020051DCD3 /* Rad_IOS_MapTestTests.m */; };
+		16D6C5A218206A180051DCD3 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D6C5A118206A180051DCD3 /* AddressBook.framework */; };
+		16D6C5A418206A240051DCD3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D6C5A318206A240051DCD3 /* MapKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		16D6C58F18206A020051DCD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16D6C56118206A020051DCD3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16D6C56818206A020051DCD3;
+			remoteInfo = Rad_IOS_MapTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		16D6C56918206A020051DCD3 /* Rad_IOS_MapTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rad_IOS_MapTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16D6C56C18206A020051DCD3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		16D6C56E18206A020051DCD3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		16D6C57018206A020051DCD3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		16D6C57418206A020051DCD3 /* Rad_IOS_MapTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Rad_IOS_MapTest-Info.plist"; sourceTree = "<group>"; };
+		16D6C57618206A020051DCD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		16D6C57818206A020051DCD3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		16D6C57A18206A020051DCD3 /* Rad_IOS_MapTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rad_IOS_MapTest-Prefix.pch"; sourceTree = "<group>"; };
+		16D6C57B18206A020051DCD3 /* QTRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTRAppDelegate.h; sourceTree = "<group>"; };
+		16D6C57C18206A020051DCD3 /* QTRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTRAppDelegate.m; sourceTree = "<group>"; };
+		16D6C57F18206A020051DCD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		16D6C58118206A020051DCD3 /* QTRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTRViewController.h; sourceTree = "<group>"; };
+		16D6C58218206A020051DCD3 /* QTRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTRViewController.m; sourceTree = "<group>"; };
+		16D6C58418206A020051DCD3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		16D6C58A18206A020051DCD3 /* Rad_IOS_MapTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Rad_IOS_MapTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		16D6C58B18206A020051DCD3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		16D6C59318206A020051DCD3 /* Rad_IOS_MapTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Rad_IOS_MapTestTests-Info.plist"; sourceTree = "<group>"; };
+		16D6C59518206A020051DCD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		16D6C59718206A020051DCD3 /* Rad_IOS_MapTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Rad_IOS_MapTestTests.m; sourceTree = "<group>"; };
+		16D6C5A118206A180051DCD3 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		16D6C5A318206A240051DCD3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16D6C56618206A020051DCD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16D6C5A418206A240051DCD3 /* MapKit.framework in Frameworks */,
+				16D6C5A218206A180051DCD3 /* AddressBook.framework in Frameworks */,
+				16D6C56F18206A020051DCD3 /* CoreGraphics.framework in Frameworks */,
+				16D6C57118206A020051DCD3 /* UIKit.framework in Frameworks */,
+				16D6C56D18206A020051DCD3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16D6C58718206A020051DCD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16D6C58C18206A020051DCD3 /* XCTest.framework in Frameworks */,
+				16D6C58E18206A020051DCD3 /* UIKit.framework in Frameworks */,
+				16D6C58D18206A020051DCD3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16D6C56018206A020051DCD3 = {
+			isa = PBXGroup;
+			children = (
+				16D6C57218206A020051DCD3 /* Rad_IOS_MapTest */,
+				16D6C59118206A020051DCD3 /* Rad_IOS_MapTestTests */,
+				16D6C56B18206A020051DCD3 /* Frameworks */,
+				16D6C56A18206A020051DCD3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		16D6C56A18206A020051DCD3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16D6C56918206A020051DCD3 /* Rad_IOS_MapTest.app */,
+				16D6C58A18206A020051DCD3 /* Rad_IOS_MapTestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		16D6C56B18206A020051DCD3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16D6C5A318206A240051DCD3 /* MapKit.framework */,
+				16D6C5A118206A180051DCD3 /* AddressBook.framework */,
+				16D6C56C18206A020051DCD3 /* Foundation.framework */,
+				16D6C56E18206A020051DCD3 /* CoreGraphics.framework */,
+				16D6C57018206A020051DCD3 /* UIKit.framework */,
+				16D6C58B18206A020051DCD3 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		16D6C57218206A020051DCD3 /* Rad_IOS_MapTest */ = {
+			isa = PBXGroup;
+			children = (
+				16D6C57B18206A020051DCD3 /* QTRAppDelegate.h */,
+				16D6C57C18206A020051DCD3 /* QTRAppDelegate.m */,
+				16D6C57E18206A020051DCD3 /* Main.storyboard */,
+				16D6C58118206A020051DCD3 /* QTRViewController.h */,
+				16D6C58218206A020051DCD3 /* QTRViewController.m */,
+				16D6C58418206A020051DCD3 /* Images.xcassets */,
+				16D6C57318206A020051DCD3 /* Supporting Files */,
+			);
+			path = Rad_IOS_MapTest;
+			sourceTree = "<group>";
+		};
+		16D6C57318206A020051DCD3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				16D6C57418206A020051DCD3 /* Rad_IOS_MapTest-Info.plist */,
+				16D6C57518206A020051DCD3 /* InfoPlist.strings */,
+				16D6C57818206A020051DCD3 /* main.m */,
+				16D6C57A18206A020051DCD3 /* Rad_IOS_MapTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		16D6C59118206A020051DCD3 /* Rad_IOS_MapTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				16D6C59718206A020051DCD3 /* Rad_IOS_MapTestTests.m */,
+				16D6C59218206A020051DCD3 /* Supporting Files */,
+			);
+			path = Rad_IOS_MapTestTests;
+			sourceTree = "<group>";
+		};
+		16D6C59218206A020051DCD3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				16D6C59318206A020051DCD3 /* Rad_IOS_MapTestTests-Info.plist */,
+				16D6C59418206A020051DCD3 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		16D6C56818206A020051DCD3 /* Rad_IOS_MapTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16D6C59B18206A020051DCD3 /* Build configuration list for PBXNativeTarget "Rad_IOS_MapTest" */;
+			buildPhases = (
+				16D6C56518206A020051DCD3 /* Sources */,
+				16D6C56618206A020051DCD3 /* Frameworks */,
+				16D6C56718206A020051DCD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rad_IOS_MapTest;
+			productName = Rad_IOS_MapTest;
+			productReference = 16D6C56918206A020051DCD3 /* Rad_IOS_MapTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		16D6C58918206A020051DCD3 /* Rad_IOS_MapTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16D6C59E18206A020051DCD3 /* Build configuration list for PBXNativeTarget "Rad_IOS_MapTestTests" */;
+			buildPhases = (
+				16D6C58618206A020051DCD3 /* Sources */,
+				16D6C58718206A020051DCD3 /* Frameworks */,
+				16D6C58818206A020051DCD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16D6C59018206A020051DCD3 /* PBXTargetDependency */,
+			);
+			name = Rad_IOS_MapTestTests;
+			productName = Rad_IOS_MapTestTests;
+			productReference = 16D6C58A18206A020051DCD3 /* Rad_IOS_MapTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		16D6C56118206A020051DCD3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = QTR;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = db;
+				TargetAttributes = {
+					16D6C58918206A020051DCD3 = {
+						TestTargetID = 16D6C56818206A020051DCD3;
+					};
+				};
+			};
+			buildConfigurationList = 16D6C56418206A020051DCD3 /* Build configuration list for PBXProject "Rad_IOS_MapTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 16D6C56018206A020051DCD3;
+			productRefGroup = 16D6C56A18206A020051DCD3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				16D6C56818206A020051DCD3 /* Rad_IOS_MapTest */,
+				16D6C58918206A020051DCD3 /* Rad_IOS_MapTestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		16D6C56718206A020051DCD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16D6C58518206A020051DCD3 /* Images.xcassets in Resources */,
+				16D6C57718206A020051DCD3 /* InfoPlist.strings in Resources */,
+				16D6C58018206A020051DCD3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16D6C58818206A020051DCD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16D6C59618206A020051DCD3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16D6C56518206A020051DCD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16D6C57D18206A020051DCD3 /* QTRAppDelegate.m in Sources */,
+				16D6C58318206A020051DCD3 /* QTRViewController.m in Sources */,
+				16D6C57918206A020051DCD3 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16D6C58618206A020051DCD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16D6C59818206A020051DCD3 /* Rad_IOS_MapTestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		16D6C59018206A020051DCD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16D6C56818206A020051DCD3 /* Rad_IOS_MapTest */;
+			targetProxy = 16D6C58F18206A020051DCD3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		16D6C57518206A020051DCD3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16D6C57618206A020051DCD3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		16D6C57E18206A020051DCD3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16D6C57F18206A020051DCD3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		16D6C59418206A020051DCD3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16D6C59518206A020051DCD3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		16D6C59918206A020051DCD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		16D6C59A18206A020051DCD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		16D6C59C18206A020051DCD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Rad_IOS_MapTest/Rad_IOS_MapTest-Prefix.pch";
+				INFOPLIST_FILE = "Rad_IOS_MapTest/Rad_IOS_MapTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		16D6C59D18206A020051DCD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Rad_IOS_MapTest/Rad_IOS_MapTest-Prefix.pch";
+				INFOPLIST_FILE = "Rad_IOS_MapTest/Rad_IOS_MapTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		16D6C59F18206A020051DCD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Rad_IOS_MapTest.app/Rad_IOS_MapTest";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Rad_IOS_MapTest/Rad_IOS_MapTest-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Rad_IOS_MapTestTests/Rad_IOS_MapTestTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		16D6C5A018206A020051DCD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Rad_IOS_MapTest.app/Rad_IOS_MapTest";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Rad_IOS_MapTest/Rad_IOS_MapTest-Prefix.pch";
+				INFOPLIST_FILE = "Rad_IOS_MapTestTests/Rad_IOS_MapTestTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16D6C56418206A020051DCD3 /* Build configuration list for PBXProject "Rad_IOS_MapTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16D6C59918206A020051DCD3 /* Debug */,
+				16D6C59A18206A020051DCD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16D6C59B18206A020051DCD3 /* Build configuration list for PBXNativeTarget "Rad_IOS_MapTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16D6C59C18206A020051DCD3 /* Debug */,
+				16D6C59D18206A020051DCD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16D6C59E18206A020051DCD3 /* Build configuration list for PBXNativeTarget "Rad_IOS_MapTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16D6C59F18206A020051DCD3 /* Debug */,
+				16D6C5A018206A020051DCD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 16D6C56118206A020051DCD3 /* Project object */;
+}
