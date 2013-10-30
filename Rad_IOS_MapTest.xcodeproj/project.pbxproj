@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		169B45F01821AB9F00B61B59 /* Qatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 169B45EF1821AB9F00B61B59 /* Qatar.m */; };
 		16D6C56D18206A020051DCD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D6C56C18206A020051DCD3 /* Foundation.framework */; };
 		16D6C56F18206A020051DCD3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D6C56E18206A020051DCD3 /* CoreGraphics.framework */; };
 		16D6C57118206A020051DCD3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D6C57018206A020051DCD3 /* UIKit.framework */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		169B45EE1821AB9F00B61B59 /* Qatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Qatar.h; sourceTree = "<group>"; };
+		169B45EF1821AB9F00B61B59 /* Qatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Qatar.m; sourceTree = "<group>"; };
 		16D6C56918206A020051DCD3 /* Rad_IOS_MapTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rad_IOS_MapTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16D6C56C18206A020051DCD3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		16D6C56E18206A020051DCD3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -88,6 +91,8 @@
 		16D6C56018206A020051DCD3 = {
 			isa = PBXGroup;
 			children = (
+				169B45EE1821AB9F00B61B59 /* Qatar.h */,
+				169B45EF1821AB9F00B61B59 /* Qatar.m */,
 				16D6C57218206A020051DCD3 /* Rad_IOS_MapTest */,
 				16D6C59118206A020051DCD3 /* Rad_IOS_MapTestTests */,
 				16D6C56B18206A020051DCD3 /* Frameworks */,
@@ -259,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16D6C57D18206A020051DCD3 /* QTRAppDelegate.m in Sources */,
+				169B45F01821AB9F00B61B59 /* Qatar.m in Sources */,
 				16D6C58318206A020051DCD3 /* QTRViewController.m in Sources */,
 				16D6C57918206A020051DCD3 /* main.m in Sources */,
 			);
