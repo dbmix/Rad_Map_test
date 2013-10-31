@@ -8,6 +8,7 @@
 
 #import "QTRQatarMapOverlayView.h"
 
+
 @interface QTRQatarMapOverlayView ()
 
 @property (nonatomic, strong) UIImage *overlayImage;

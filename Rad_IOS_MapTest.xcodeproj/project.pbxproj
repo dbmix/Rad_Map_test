@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		169B45F01821AB9F00B61B59 /* Qatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 169B45EF1821AB9F00B61B59 /* Qatar.m */; };
+		16D624B118229B3200F9C0F1 /* QFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D624B018229B3200F9C0F1 /* QFlag.png */; };
 		16D6C56D18206A020051DCD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D6C56C18206A020051DCD3 /* Foundation.framework */; };
 		16D6C56F18206A020051DCD3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D6C56E18206A020051DCD3 /* CoreGraphics.framework */; };
 		16D6C57118206A020051DCD3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D6C57018206A020051DCD3 /* UIKit.framework */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		169B45EE1821AB9F00B61B59 /* Qatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Qatar.h; sourceTree = "<group>"; };
 		169B45EF1821AB9F00B61B59 /* Qatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Qatar.m; sourceTree = "<group>"; };
+		16D624B018229B3200F9C0F1 /* QFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = QFlag.png; path = ../QFlag.png; sourceTree = "<group>"; };
 		16D6C56918206A020051DCD3 /* Rad_IOS_MapTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rad_IOS_MapTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16D6C56C18206A020051DCD3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		16D6C56E18206A020051DCD3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -99,6 +101,7 @@
 			children = (
 				169B45EE1821AB9F00B61B59 /* Qatar.h */,
 				169B45EF1821AB9F00B61B59 /* Qatar.m */,
+				16D624B018229B3200F9C0F1 /* QFlag.png */,
 				16D6C57218206A020051DCD3 /* Rad_IOS_MapTest */,
 				16D6C59118206A020051DCD3 /* Rad_IOS_MapTestTests */,
 				16D6C56B18206A020051DCD3 /* Frameworks */,
@@ -255,6 +258,7 @@
 				16D6C58518206A020051DCD3 /* Images.xcassets in Resources */,
 				16D6C57718206A020051DCD3 /* InfoPlist.strings in Resources */,
 				16D6C58018206A020051DCD3 /* Main.storyboard in Resources */,
+				16D624B118229B3200F9C0F1 /* QFlag.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

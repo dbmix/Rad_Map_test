@@ -8,7 +8,7 @@
 
 #import <MapKit/MapKit.h>
 
-@interface QTRQatarMapOverlayView : MKOverlayView
+@interface QTRQatarMapOverlayView : MKOverlayRenderer
 
 - (instancetype)initWithOverlay:(id<MKOverlay>)overlay overlayImage:(UIImage *)overlayImage;
 
