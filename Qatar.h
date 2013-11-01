@@ -26,4 +26,5 @@
 @property (nonatomic, strong) NSString *name;
 
 - (instancetype)initWithRegion;
+- (NSArray *) qatarOutlineCoordinates;
 @end

@@ -12,6 +12,7 @@
 #import "Qatar.h"
 #import "QTRQatarMapOverlayView.h"
 #import "QTRQatarMapOverlay.h"
+#import "QTRStartingRegion.h"
 
 @interface QTRViewController () <MKMapViewDelegate>
 
@@ -22,6 +23,7 @@
 @property (strong, nonatomic) Qatar *qatar;
 @property (strong, nonatomic) UIButton *QTRFlag;
 @property (strong, nonatomic) QTRQatarMapOverlay *flagOverlay;
+@property (strong, nonatomic) UIButton *Doha;
 
 @end
 
@@ -36,12 +38,7 @@ bool graphicOverlay = NO;
 	// Do any additional setup after loading the view, typically from a nib.
     self.QTRView = [[MKMapView alloc] init];
     self.view = self.QTRView;
-        //CLLocationCoordinate2D startCenter;
-        //MKCoordinateSpan startSpan;
-        //startCenter.latitude = 40.697488;
-        // startCenter.longitude = -73.97968;
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(
-                                                                CLLocationCoordinate2DMake(24.2, 45.1), 2500000, 2500000);
+    MKCoordinateRegion region = [QTRStartingRegion startingRegion];
     [self.QTRView setRegion:region animated:NO];
     self.QTRView.delegate = self;
 
@@ -71,14 +68,14 @@ bool graphicOverlay = NO;
     self.QTRButton.backgroundColor = [UIColor whiteColor];
     [self.QTRButton setTitle:@"Qatar" forState:UIControlStateNormal];
     [self.QTRButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-    self.QTRButton.titleLabel.textColor = [UIColor blackColor];
+        //self.QTRButton.titleLabel.textColor = [UIColor blackColor];
     [self.QTRButton addTarget:self action:@selector(zoomToQatarWithAnnotations) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:self.QTRButton];
 
     self.QTRFlag.backgroundColor = [UIColor whiteColor];
     [self.QTRFlag setTitle:@"Flag" forState:UIControlStateNormal];
     [self.QTRFlag setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-    self.QTRFlag.titleLabel.textColor = [UIColor blackColor];
+        //self.QTRFlag.titleLabel.textColor = [UIColor blackColor];
     [self.QTRFlag addTarget:self action:@selector(addFlagOverlay) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:self.QTRFlag];
 
@@ -95,42 +92,45 @@ bool graphicOverlay = NO;
         if ([annotationsOnMap count] > 0) {
             [self.QTRView removeAnnotations:annotationsOnMap];
         }
-        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(
-                                                                       CLLocationCoordinate2DMake(24.2, 45.1), 2500000, 2500000);
+        MKCoordinateRegion region = [QTRStartingRegion startingRegion];
         [self.QTRView setRegion:region animated:YES];
+        [self.QTRButton setTitle:@"Qatar" forState:UIControlStateNormal];
         return;
     }
-    MKPointAnnotation *pt1 = [self createAnnotationAtCordinate:CLLocationCoordinate2DMake(26.185, 51.21)];
-    MKPointAnnotation *pt2 = [self createAnnotationAtCordinate:CLLocationCoordinate2DMake(25.899, 51.68)];
-    MKPointAnnotation *pt3 = [self createAnnotationAtCordinate:CLLocationCoordinate2DMake(24.871, 51.76)];
-    MKPointAnnotation *pt4 = [self createAnnotationAtCordinate:CLLocationCoordinate2DMake(24.397, 51.22)];
-    MKPointAnnotation *pt5 = [self createAnnotationAtCordinate:CLLocationCoordinate2DMake(25.252, 50.73)];
-    MKPointAnnotation *pt6 = [self createAnnotationAtCordinate:CLLocationCoordinate2DMake(25.795, 50.80)];
-    CLLocationCoordinate2D ovrlayCoord [6];
-    ovrlayCoord [0] = pt1.coordinate;
-    ovrlayCoord [1] = pt2.coordinate;
-    ovrlayCoord [2] = pt3.coordinate;
-    ovrlayCoord [3] = pt4.coordinate;
-    ovrlayCoord [4] = pt5.coordinate;
-    ovrlayCoord [5] = pt6.coordinate;
-    self.demoPolygon = [MKPolygon polygonWithCoordinates:ovrlayCoord count:6];
+    NSArray *outLineCoordinates = [self.qatar qatarOutlineCoordinates];
+    int nmbr = [outLineCoordinates count];
+    CLLocationCoordinate2D ovrlayCoord [nmbr];
+    for (MKPointAnnotation *pt in outLineCoordinates) {
+        ovrlayCoord [[outLineCoordinates indexOfObject:pt]] = pt.coordinate;
+    }
+
+    self.demoPolygon = [MKPolygon polygonWithCoordinates:ovrlayCoord count:nmbr];
     [self.QTRView addOverlay:self.demoPolygon level:MKOverlayLevelAboveRoads];
     polyOverlay = YES;
-        //[self fadeTheAnnotationsAndOverlay];
 
-    [self.QTRView showAnnotations:@[pt1,pt2,pt3,pt4,pt5,pt6] animated:YES];
+    [self.QTRView showAnnotations:outLineCoordinates animated:YES];
     NSArray *annotationsOnMap = self.QTRView.annotations;
     if ([annotationsOnMap count] > 0) {
         [self.QTRView removeAnnotations:annotationsOnMap];
     }
+    CGRect flagButton = self.QTRFlag.frame;
+    self.Doha = [[UIButton alloc] initWithFrame:CGRectMake(330, flagButton.origin.y , 120, 40)];
+    self.Doha.backgroundColor = [UIColor whiteColor];
+    [self.Doha setTitle:@"Doha" forState:UIControlStateNormal];
+    [self.Doha setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+        //self.Doha.titleLabel.textColor = [UIColor blackColor];
+    [self.Doha addTarget:self action:@selector(mapDoha) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:self.Doha];
+
+    [self.QTRButton setTitle:@"Region" forState:UIControlStateNormal];
 
 
-        //[self fadeTheAnnotationsAndOverlay];
+
+
 
 }
 
 -(MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay{
-        //UIColor *purpleColor = [UIColor colorWithRed:0.149f green:0.0f blue:0.40f alpha:1.0f];
     if ([overlay isKindOfClass:QTRQatarMapOverlay.class]) {
         UIImage *QFlag = [UIImage imageNamed:@"QFlag"];
         QTRQatarMapOverlayView *overlayView = [[QTRQatarMapOverlayView alloc] initWithOverlay:overlay overlayImage:QFlag];
@@ -146,23 +146,6 @@ bool graphicOverlay = NO;
         return self.polyRender;
 }
 
--(void)fadeTheAnnotationsAndOverlay {
-
-        //[UIView animateWithDuration:0.6 animations:^{[self.QTRView removeOverlay:self.demoPolygon];} completion:^(BOOL finished) {}];
-    [UIView animateWithDuration:2.0 delay:10 options:UIViewAnimationOptionAllowAnimatedContent animations:^{
-        self.polyRender.fillColor = [UIColor colorWithHue:.5 saturation:.5 brightness:.5 alpha:.5];
-        self.polyRender.strokeColor =[UIColor colorWithRed:0 green:0 blue:0 alpha:0.5f];} completion:^(BOOL finished) {
-        ;}];
-
-}
-
-
--(MKPointAnnotation *)createAnnotationAtCordinate:(CLLocationCoordinate2D) coord{
-    MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
-    point.coordinate = coord;
-    [[self.QTRView viewForAnnotation:point] setHidden:YES];
-    return point;
-}
 
 -(void) didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
     CGRect btn = self.QTRButton.frame;
@@ -178,14 +161,15 @@ bool graphicOverlay = NO;
     }
     self.QTRButton.frame = btn;
     self.QTRFlag.frame = btn2;
+        //btn2.origin.x =
     NSLog(@"Button frame = %@", NSStringFromCGRect(self.QTRButton.frame));
-    self.QTRButton.hidden = self.QTRFlag.hidden = NO;
+    self.QTRButton.hidden = self.QTRFlag.hidden = self.Doha.hidden = NO;
 
 
 }
 
 -(void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
-    self.QTRButton.hidden = self.QTRFlag.hidden = YES;
+    self.QTRButton.hidden = self.QTRFlag.hidden = self.Doha.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -205,23 +189,8 @@ bool graphicOverlay = NO;
     graphicOverlay = YES;
 }
 
-/*
-- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id<MKOverlay>)overlay {
-    if ([overlay isKindOfClass:QTRQatarMapOverlay.class]) {
-        UIImage *QFlag = [UIImage imageNamed:@"QFlag"];
-        QTRQatarMapOverlayView *overlayView = [[QTRQatarMapOverlayView alloc] initWithOverlay:overlay overlayImage:QFlag];
+- (void) mapDoha {
+    NSLog(@" mapping Doha now");
 
-        return overlayView;
-    }
-
-    return nil;
 }
-
-- (void)addBoundary {
-    MKPolygon *polygon = [MKPolygon polygonWithCoordinates:self.qatar.boundary
-                                                     count:4];//self.qatar.boundaryPointsCount
-    [self.QTRView addOverlay:polygon];
-}
-*/
-
 @end

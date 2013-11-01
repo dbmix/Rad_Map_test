@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		161C2D6D18241E3000AA63F7 /* QTRStartingRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 161C2D6C18241E3000AA63F7 /* QTRStartingRegion.m */; };
 		169B45F01821AB9F00B61B59 /* Qatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 169B45EF1821AB9F00B61B59 /* Qatar.m */; };
 		16D624B118229B3200F9C0F1 /* QFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D624B018229B3200F9C0F1 /* QFlag.png */; };
 		16D6C56D18206A020051DCD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D6C56C18206A020051DCD3 /* Foundation.framework */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		161C2D6B18241E3000AA63F7 /* QTRStartingRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTRStartingRegion.h; sourceTree = "<group>"; };
+		161C2D6C18241E3000AA63F7 /* QTRStartingRegion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTRStartingRegion.m; sourceTree = "<group>"; };
 		169B45EE1821AB9F00B61B59 /* Qatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Qatar.h; sourceTree = "<group>"; };
 		169B45EF1821AB9F00B61B59 /* Qatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Qatar.m; sourceTree = "<group>"; };
 		16D624B018229B3200F9C0F1 /* QFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = QFlag.png; path = ../QFlag.png; sourceTree = "<group>"; };
@@ -96,11 +99,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		161C2D6A18241E1A00AA63F7 /* Regions */ = {
+			isa = PBXGroup;
+			children = (
+				161C2D6B18241E3000AA63F7 /* QTRStartingRegion.h */,
+				161C2D6C18241E3000AA63F7 /* QTRStartingRegion.m */,
+				169B45EE1821AB9F00B61B59 /* Qatar.h */,
+				169B45EF1821AB9F00B61B59 /* Qatar.m */,
+			);
+			name = Regions;
+			sourceTree = "<group>";
+		};
 		16D6C56018206A020051DCD3 = {
 			isa = PBXGroup;
 			children = (
-				169B45EE1821AB9F00B61B59 /* Qatar.h */,
-				169B45EF1821AB9F00B61B59 /* Qatar.m */,
+				161C2D6A18241E1A00AA63F7 /* Regions */,
 				16D624B018229B3200F9C0F1 /* QFlag.png */,
 				16D6C57218206A020051DCD3 /* Rad_IOS_MapTest */,
 				16D6C59118206A020051DCD3 /* Rad_IOS_MapTestTests */,
@@ -280,6 +293,7 @@
 				16E037BD1821B96E0061E9D1 /* QTRQatarMapOverlay.m in Sources */,
 				16D6C57D18206A020051DCD3 /* QTRAppDelegate.m in Sources */,
 				169B45F01821AB9F00B61B59 /* Qatar.m in Sources */,
+				161C2D6D18241E3000AA63F7 /* QTRStartingRegion.m in Sources */,
 				16D6C58318206A020051DCD3 /* QTRViewController.m in Sources */,
 				16E037C01821BAB30061E9D1 /* QTRQatarMapOverlayView.m in Sources */,
 				16D6C57918206A020051DCD3 /* main.m in Sources */,
