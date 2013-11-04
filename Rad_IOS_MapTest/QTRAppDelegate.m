@@ -13,7 +13,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+
+    NSLog(@"target is %@",[[[NSProcessInfo processInfo] environment] objectForKey:@"TARGET"]);
+        // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
         //self.QTRMapController = [[QTRViewController alloc] initWithNibName:@"Main" bundle:nil];
     self.QTRMapController = [[QTRViewController alloc] init];

@@ -38,6 +38,36 @@
                ReferencedContainer = "container:Rad_IOS_MapTest.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "160F577E182840AF00B31F1D"
+               BuildableName = "Rad_OSX_MapTestTests.xctest"
+               BlueprintName = "Rad_OSX_MapTestTests"
+               ReferencedContainer = "container:Rad_IOS_MapTest.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "160F571A18283DC100B31F1D"
+               BuildableName = "Rad_OSX_Map_TestTests.xctest"
+               BlueprintName = "Rad_OSX_Map_TestTests"
+               ReferencedContainer = "container:Rad_IOS_MapTest.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "160F574B18283FD700B31F1D"
+               BuildableName = "Rad_Mac_MapTestTests.xctest"
+               BlueprintName = "Rad_Mac_MapTestTests"
+               ReferencedContainer = "container:Rad_IOS_MapTest.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
@@ -67,6 +97,13 @@
             ReferencedContainer = "container:Rad_IOS_MapTest.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "TARGET"
+            value = "IOS"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

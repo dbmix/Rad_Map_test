@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		160F56C61827F61F00B31F1D /* QFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 160F56C51827F61F00B31F1D /* QFlag.png */; };
 		161C2D6D18241E3000AA63F7 /* QTRStartingRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 161C2D6C18241E3000AA63F7 /* QTRStartingRegion.m */; };
 		169B45F01821AB9F00B61B59 /* Qatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 169B45EF1821AB9F00B61B59 /* Qatar.m */; };
-		16D624B118229B3200F9C0F1 /* QFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D624B018229B3200F9C0F1 /* QFlag.png */; };
 		16D6C56D18206A020051DCD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D6C56C18206A020051DCD3 /* Foundation.framework */; };
 		16D6C56F18206A020051DCD3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D6C56E18206A020051DCD3 /* CoreGraphics.framework */; };
 		16D6C57118206A020051DCD3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D6C57018206A020051DCD3 /* UIKit.framework */; };
@@ -41,11 +41,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		160F56C51827F61F00B31F1D /* QFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QFlag.png; sourceTree = "<group>"; };
+		160F56CF18280F7500B31F1D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		160F56D018280F7500B31F1D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		160F56D118280F7500B31F1D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		160F575F1828408000B31F1D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		161C2D6B18241E3000AA63F7 /* QTRStartingRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTRStartingRegion.h; sourceTree = "<group>"; };
 		161C2D6C18241E3000AA63F7 /* QTRStartingRegion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTRStartingRegion.m; sourceTree = "<group>"; };
 		169B45EE1821AB9F00B61B59 /* Qatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Qatar.h; sourceTree = "<group>"; };
 		169B45EF1821AB9F00B61B59 /* Qatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Qatar.m; sourceTree = "<group>"; };
-		16D624B018229B3200F9C0F1 /* QFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = QFlag.png; path = ../QFlag.png; sourceTree = "<group>"; };
 		16D6C56918206A020051DCD3 /* Rad_IOS_MapTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rad_IOS_MapTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16D6C56C18206A020051DCD3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		16D6C56E18206A020051DCD3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -99,6 +103,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		160F56CE18280F7500B31F1D /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				160F56CF18280F7500B31F1D /* AppKit.framework */,
+				160F56D018280F7500B31F1D /* CoreData.framework */,
+				160F56D118280F7500B31F1D /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
 		161C2D6A18241E1A00AA63F7 /* Regions */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,8 +127,8 @@
 		16D6C56018206A020051DCD3 = {
 			isa = PBXGroup;
 			children = (
+				160F56C51827F61F00B31F1D /* QFlag.png */,
 				161C2D6A18241E1A00AA63F7 /* Regions */,
-				16D624B018229B3200F9C0F1 /* QFlag.png */,
 				16D6C57218206A020051DCD3 /* Rad_IOS_MapTest */,
 				16D6C59118206A020051DCD3 /* Rad_IOS_MapTestTests */,
 				16D6C56B18206A020051DCD3 /* Frameworks */,
@@ -134,12 +148,14 @@
 		16D6C56B18206A020051DCD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				160F575F1828408000B31F1D /* Cocoa.framework */,
 				16D6C5A318206A240051DCD3 /* MapKit.framework */,
 				16D6C5A118206A180051DCD3 /* AddressBook.framework */,
 				16D6C56C18206A020051DCD3 /* Foundation.framework */,
 				16D6C56E18206A020051DCD3 /* CoreGraphics.framework */,
 				16D6C57018206A020051DCD3 /* UIKit.framework */,
 				16D6C58B18206A020051DCD3 /* XCTest.framework */,
+				160F56CE18280F7500B31F1D /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -271,7 +287,7 @@
 				16D6C58518206A020051DCD3 /* Images.xcassets in Resources */,
 				16D6C57718206A020051DCD3 /* InfoPlist.strings in Resources */,
 				16D6C58018206A020051DCD3 /* Main.storyboard in Resources */,
-				16D624B118229B3200F9C0F1 /* QFlag.png in Resources */,
+				160F56C61827F61F00B31F1D /* QFlag.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +379,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -381,6 +398,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -403,7 +421,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -414,6 +433,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
@@ -425,10 +445,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Rad_IOS_MapTest/Rad_IOS_MapTest-Prefix.pch";
 				INFOPLIST_FILE = "Rad_IOS_MapTest/Rad_IOS_MapTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "57543B1B-7C02-48A4-8DCB-B8D2AC720428";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -438,10 +462,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Rad_IOS_MapTest/Rad_IOS_MapTest-Prefix.pch";
 				INFOPLIST_FILE = "Rad_IOS_MapTest/Rad_IOS_MapTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "57543B1B-7C02-48A4-8DCB-B8D2AC720428";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

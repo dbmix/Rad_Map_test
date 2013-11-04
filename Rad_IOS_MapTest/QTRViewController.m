@@ -24,6 +24,7 @@
 @property (strong, nonatomic) UIButton *QTRFlag;
 @property (strong, nonatomic) QTRQatarMapOverlay *flagOverlay;
 @property (strong, nonatomic) UIButton *Doha;
+@property (strong, nonatomic) NSDictionary *viewsDictionary;
 
 @end
 
@@ -46,23 +47,32 @@ bool graphicOverlay = NO;
 
 
 
+
+
 }
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    CGRect scrn = [[UIScreen mainScreen] bounds];
+        //CGRect scrn = [[UIScreen mainScreen] bounds];
 
-    if (([[UIDevice currentDevice] orientation] == UIDeviceOrientationLandscapeLeft) ||
-        ([[UIDevice currentDevice] orientation] == UIDeviceOrientationLandscapeRight)) {
-        self.QTRButton = [[UIButton alloc] initWithFrame:CGRectMake(30, scrn.size.height -320 , 120, 40)];
-        self.QTRFlag = [[UIButton alloc] initWithFrame:CGRectMake(180, scrn.size.height -320 , 120, 40)];
-        NSLog(@"Button frame = %@", NSStringFromCGRect(self.QTRButton.frame));
-    } else {
-        self.QTRButton = [[UIButton alloc] initWithFrame:CGRectMake(30, scrn.size.height -50 , 120, 40)];
-        self.QTRFlag = [[UIButton alloc] initWithFrame:CGRectMake(180, scrn.size.height -50 , 120, 40)];
+        //if (([[UIDevice currentDevice] orientation] == UIDeviceOrientationLandscapeLeft) ||
+        //([[UIDevice currentDevice] orientation] == UIDeviceOrientationLandscapeRight)) {
+        //self.QTRButton = [[UIButton alloc] initWithFrame:CGRectMake(30, scrn.size.height -320 , 120, 40)];
+    self.QTRButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [self.QTRButton setTranslatesAutoresizingMaskIntoConstraints:NO];
+        //self.QTRFlag = [[UIButton alloc] initWithFrame:CGRectMake(180, scrn.size.height -320 , 120, 40)];
+    self.QTRFlag = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [self.QTRFlag setTranslatesAutoresizingMaskIntoConstraints:NO];
 
-        NSLog(@"Button frame = %@", NSStringFromCGRect(self.QTRButton.frame));
-    }
+    self.Doha = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [self.Doha setTranslatesAutoresizingMaskIntoConstraints:NO];
+        //NSLog(@"Button frame = %@", NSStringFromCGRect(self.QTRButton.frame));
+        //} else {
+        //self.QTRButton = [[UIButton alloc] initWithFrame:CGRectMake(30, scrn.size.height -50 , 120, 40)];
+        //self.QTRFlag = [[UIButton alloc] initWithFrame:CGRectMake(180, scrn.size.height -50 , 120, 40)];
+
+        // NSLog(@"Button frame = %@", NSStringFromCGRect(self.QTRButton.frame));
+        //}
 
 
     self.QTRButton.backgroundColor = [UIColor whiteColor];
@@ -78,6 +88,25 @@ bool graphicOverlay = NO;
         //self.QTRFlag.titleLabel.textColor = [UIColor blackColor];
     [self.QTRFlag addTarget:self action:@selector(addFlagOverlay) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:self.QTRFlag];
+    [self.view addSubview:self.Doha];
+    self.Doha.hidden = YES;
+        //NSDictionary *viewsDictionary = NSDictionaryOfVariableBindings(_QTRButton, _QTRFlag, _Doha);
+    _viewsDictionary = NSDictionaryOfVariableBindings(_QTRButton, _QTRFlag, _Doha);
+    NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-30-[_QTRButton]" options:0 metrics:nil views:_viewsDictionary];
+    constraints = [constraints arrayByAddingObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_QTRButton]-30-|" options:0 metrics:nil views:_viewsDictionary]];
+    constraints = [constraints arrayByAddingObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"[_QTRButton(>=100)]" options:0 metrics:nil views:_viewsDictionary]];
+
+
+    constraints = [constraints arrayByAddingObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[_QTRButton]-30-[_QTRFlag]" options:0 metrics:nil views:_viewsDictionary]];
+    constraints = [constraints arrayByAddingObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_QTRFlag]-30-|" options:0 metrics:nil views:_viewsDictionary]];
+    constraints = [constraints arrayByAddingObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"[_QTRFlag(>=100)]" options:0 metrics:nil views:_viewsDictionary]];
+
+    constraints = [constraints arrayByAddingObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[_QTRFlag]-30-[_Doha]" options:0 metrics:nil views:_viewsDictionary]];
+    constraints = [constraints arrayByAddingObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_Doha]-30-|" options:0 metrics:nil views:_viewsDictionary]];
+    constraints = [constraints arrayByAddingObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"[_Doha(>=100)]" options:0 metrics:nil views:_viewsDictionary]];
+
+    [self.view addConstraints:constraints];
+
 
 
 }
@@ -95,6 +124,7 @@ bool graphicOverlay = NO;
         MKCoordinateRegion region = [QTRStartingRegion startingRegion];
         [self.QTRView setRegion:region animated:YES];
         [self.QTRButton setTitle:@"Qatar" forState:UIControlStateNormal];
+        self.Doha.hidden = YES;
         return;
     }
     NSArray *outLineCoordinates = [self.qatar qatarOutlineCoordinates];
@@ -113,15 +143,14 @@ bool graphicOverlay = NO;
     if ([annotationsOnMap count] > 0) {
         [self.QTRView removeAnnotations:annotationsOnMap];
     }
-    CGRect flagButton = self.QTRFlag.frame;
-    self.Doha = [[UIButton alloc] initWithFrame:CGRectMake(330, flagButton.origin.y , 120, 40)];
+        //CGRect flagButton = self.QTRFlag.frame;
+        //self.Doha = [[UIButton alloc] initWithFrame:CGRectMake(330, flagButton.origin.y , 120, 40)];
     self.Doha.backgroundColor = [UIColor whiteColor];
     [self.Doha setTitle:@"Doha" forState:UIControlStateNormal];
     [self.Doha setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
         //self.Doha.titleLabel.textColor = [UIColor blackColor];
     [self.Doha addTarget:self action:@selector(mapDoha) forControlEvents:UIControlEventTouchDown];
-    [self.view addSubview:self.Doha];
-
+    self.Doha.hidden = NO;
     [self.QTRButton setTitle:@"Region" forState:UIControlStateNormal];
 
 
@@ -146,7 +175,7 @@ bool graphicOverlay = NO;
         return self.polyRender;
 }
 
-
+/*
 -(void) didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
     CGRect btn = self.QTRButton.frame;
     CGRect btn2 = self.QTRFlag.frame;
@@ -170,7 +199,7 @@ bool graphicOverlay = NO;
 
 -(void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
     self.QTRButton.hidden = self.QTRFlag.hidden = self.Doha.hidden = YES;
-}
+} */
 
 - (void)didReceiveMemoryWarning
 {
