@@ -9,9 +9,24 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>Rad_OSX_Map_Test.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>16002B14182843D400452358</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>16002B2E182843D400452358</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>160F56CA18280F7400B31F1D</key>
 		<dict>
 			<key>primary</key>

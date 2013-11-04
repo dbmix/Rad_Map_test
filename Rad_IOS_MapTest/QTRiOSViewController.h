@@ -1,5 +1,5 @@
 //
-//  QTRViewController.h
+//  QTRiOSViewController.h
 //  Rad_IOS_MapTest
 //
 //  Created by Developer Station 05 on 10/29/13.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface QTRViewController : UIViewController
+@interface QTRiOSViewController : UIViewController
 
 
     //@property (weak, nonatomic) IBOutlet MKMapView *QTRMap;

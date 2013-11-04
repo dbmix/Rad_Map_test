@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "16D6C56818206A020051DCD3"
-               BuildableName = "Rad_IOS_MapTest.app"
-               BlueprintName = "Rad_IOS_MapTest"
+               BlueprintIdentifier = "16002B14182843D400452358"
+               BuildableName = "Rad_OSX_Map_Test.app"
+               BlueprintName = "Rad_OSX_Map_Test"
                ReferencedContainer = "container:Rad_IOS_MapTest.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,53 +28,13 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "16D6C58918206A020051DCD3"
-               BuildableName = "Rad_IOS_MapTestTests.xctest"
-               BlueprintName = "Rad_IOS_MapTestTests"
-               ReferencedContainer = "container:Rad_IOS_MapTest.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "160F577E182840AF00B31F1D"
-               BuildableName = "Rad_OSX_MapTestTests.xctest"
-               BlueprintName = "Rad_OSX_MapTestTests"
-               ReferencedContainer = "container:Rad_IOS_MapTest.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "16002B2E182843D400452358"
-               BuildableName = "Rad_OSX_Map_TestTests.xctest"
-               BlueprintName = "Rad_OSX_Map_TestTests"
-               ReferencedContainer = "container:Rad_IOS_MapTest.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "160F574B18283FD700B31F1D"
-               BuildableName = "Rad_Mac_MapTestTests.xctest"
-               BlueprintName = "Rad_Mac_MapTestTests"
-               ReferencedContainer = "container:Rad_IOS_MapTest.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "16D6C56818206A020051DCD3"
-            BuildableName = "Rad_IOS_MapTest.app"
-            BlueprintName = "Rad_IOS_MapTest"
+            BlueprintIdentifier = "16002B14182843D400452358"
+            BuildableName = "Rad_OSX_Map_Test.app"
+            BlueprintName = "Rad_OSX_Map_Test"
             ReferencedContainer = "container:Rad_IOS_MapTest.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -91,16 +51,16 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "16D6C56818206A020051DCD3"
-            BuildableName = "Rad_IOS_MapTest.app"
-            BlueprintName = "Rad_IOS_MapTest"
+            BlueprintIdentifier = "16002B14182843D400452358"
+            BuildableName = "Rad_OSX_Map_Test.app"
+            BlueprintName = "Rad_OSX_Map_Test"
             ReferencedContainer = "container:Rad_IOS_MapTest.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "TARGET"
-            value = "IOS"
+            value = "OSX"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>
@@ -116,9 +76,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "16D6C56818206A020051DCD3"
-            BuildableName = "Rad_IOS_MapTest.app"
-            BlueprintName = "Rad_IOS_MapTest"
+            BlueprintIdentifier = "16002B14182843D400452358"
+            BuildableName = "Rad_OSX_Map_Test.app"
+            BlueprintName = "Rad_OSX_Map_Test"
             ReferencedContainer = "container:Rad_IOS_MapTest.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

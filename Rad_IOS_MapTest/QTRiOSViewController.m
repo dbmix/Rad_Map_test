@@ -1,20 +1,20 @@
 //
-//  QTRViewController.m
+//  QTRiOSViewController.m
 //  Rad_IOS_MapTest
 //
 //  Created by Developer Station 05 on 10/29/13.
 //  Copyright (c) 2013 db. All rights reserved.
 //
 
-#import "QTRViewController.h"
+#import "QTRiOSViewController.h"
 #import <MapKit/MapKit.h>
 #import <AddressBook/AddressBook.h>
 #import "Qatar.h"
-#import "QTRQatarMapOverlayView.h"
+#import "QTRiOSQatarMapOverlayView.h"
 #import "QTRQatarMapOverlay.h"
 #import "QTRStartingRegion.h"
 
-@interface QTRViewController () <MKMapViewDelegate>
+@interface QTRiOSViewController () <MKMapViewDelegate>
 
 @property (strong, nonatomic) MKMapView *QTRView;
 @property (strong, nonatomic) UIButton *QTRButton;
@@ -28,7 +28,7 @@
 
 @end
 
-@implementation QTRViewController
+@implementation QTRiOSViewController
 
 bool polyOverlay = NO;
 bool graphicOverlay = NO;
@@ -130,8 +130,8 @@ bool graphicOverlay = NO;
     NSArray *outLineCoordinates = [self.qatar qatarOutlineCoordinates];
     int nmbr = [outLineCoordinates count];
     CLLocationCoordinate2D ovrlayCoord [nmbr];
-    for (MKPointAnnotation *pt in outLineCoordinates) {
-        ovrlayCoord [[outLineCoordinates indexOfObject:pt]] = pt.coordinate;
+    for (int i=0; i<nmbr; i++) {
+        ovrlayCoord[i] = [(MKPointAnnotation *)outLineCoordinates[i] coordinate];
     }
 
     self.demoPolygon = [MKPolygon polygonWithCoordinates:ovrlayCoord count:nmbr];
@@ -162,7 +162,7 @@ bool graphicOverlay = NO;
 -(MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay{
     if ([overlay isKindOfClass:QTRQatarMapOverlay.class]) {
         UIImage *QFlag = [UIImage imageNamed:@"QFlag"];
-        QTRQatarMapOverlayView *overlayView = [[QTRQatarMapOverlayView alloc] initWithOverlay:overlay overlayImage:QFlag];
+        QTRiOSQatarMapOverlayView *overlayView = [[QTRiOSQatarMapOverlayView alloc] initWithOverlay:overlay overlayImage:QFlag];
         overlayView.alpha = 0.5;
         return overlayView;
     }
@@ -175,31 +175,6 @@ bool graphicOverlay = NO;
         return self.polyRender;
 }
 
-/*
--(void) didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-    CGRect btn = self.QTRButton.frame;
-    CGRect btn2 = self.QTRFlag.frame;
-    CGRect scrn = [[UIScreen mainScreen] bounds];
-    if (([[UIDevice currentDevice] orientation] == UIDeviceOrientationLandscapeLeft) ||
-        ([[UIDevice currentDevice] orientation] == UIDeviceOrientationLandscapeRight)) {
-        btn.origin.y = btn2.origin.y = scrn.size.height - 320;
-        NSLog(@"is landscape");
-    } else {
-        btn.origin.y = btn2.origin.y = scrn.size.height - 50;
-        NSLog(@"is portrait");
-    }
-    self.QTRButton.frame = btn;
-    self.QTRFlag.frame = btn2;
-        //btn2.origin.x =
-    NSLog(@"Button frame = %@", NSStringFromCGRect(self.QTRButton.frame));
-    self.QTRButton.hidden = self.QTRFlag.hidden = self.Doha.hidden = NO;
-
-
-}
-
--(void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
-    self.QTRButton.hidden = self.QTRFlag.hidden = self.Doha.hidden = YES;
-} */
 
 - (void)didReceiveMemoryWarning
 {

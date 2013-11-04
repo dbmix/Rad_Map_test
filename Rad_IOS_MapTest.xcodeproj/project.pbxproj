@@ -7,9 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16002B16182843D400452358 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160F575F1828408000B31F1D /* Cocoa.framework */; };
+		16002B1C182843D400452358 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 16002B1A182843D400452358 /* InfoPlist.strings */; };
+		16002B1E182843D400452358 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 16002B1D182843D400452358 /* main.m */; };
+		16002B22182843D400452358 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 16002B20182843D400452358 /* Credits.rtf */; };
+		16002B25182843D400452358 /* QTRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 16002B24182843D400452358 /* QTRAppDelegate.m */; };
+		16002B28182843D400452358 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16002B26182843D400452358 /* MainMenu.xib */; };
+		16002B2A182843D400452358 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16002B29182843D400452358 /* Images.xcassets */; };
+		16002B30182843D400452358 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D6C58B18206A020051DCD3 /* XCTest.framework */; };
+		16002B31182843D400452358 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160F575F1828408000B31F1D /* Cocoa.framework */; };
+		16002B39182843D400452358 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 16002B37182843D400452358 /* InfoPlist.strings */; };
+		16002B3B182843D400452358 /* Rad_OSX_Map_TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 16002B3A182843D400452358 /* Rad_OSX_Map_TestTests.m */; };
+		16002B451828489E00452358 /* QTROSXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16002B431828489E00452358 /* QTROSXViewController.m */; };
+		16002B4818284ABD00452358 /* QTROSXQatarMapOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16002B4618284ABD00452358 /* QTROSXQatarMapOverlayView.m */; };
 		160F56C61827F61F00B31F1D /* QFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 160F56C51827F61F00B31F1D /* QFlag.png */; };
 		161C2D6D18241E3000AA63F7 /* QTRStartingRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 161C2D6C18241E3000AA63F7 /* QTRStartingRegion.m */; };
 		169B45F01821AB9F00B61B59 /* Qatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 169B45EF1821AB9F00B61B59 /* Qatar.m */; };
+		16A283DE18284C91008B41E0 /* Qatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 169B45EF1821AB9F00B61B59 /* Qatar.m */; };
+		16A283DF18284C9B008B41E0 /* QTRStartingRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 161C2D6C18241E3000AA63F7 /* QTRStartingRegion.m */; };
+		16A283E018284DF0008B41E0 /* QTRQatarMapOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E037BC1821B96E0061E9D1 /* QTRQatarMapOverlay.m */; };
+		16A283E118284E54008B41E0 /* QFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 160F56C51827F61F00B31F1D /* QFlag.png */; };
 		16D6C56D18206A020051DCD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D6C56C18206A020051DCD3 /* Foundation.framework */; };
 		16D6C56F18206A020051DCD3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D6C56E18206A020051DCD3 /* CoreGraphics.framework */; };
 		16D6C57118206A020051DCD3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D6C57018206A020051DCD3 /* UIKit.framework */; };
@@ -17,7 +34,7 @@
 		16D6C57918206A020051DCD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D6C57818206A020051DCD3 /* main.m */; };
 		16D6C57D18206A020051DCD3 /* QTRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D6C57C18206A020051DCD3 /* QTRAppDelegate.m */; };
 		16D6C58018206A020051DCD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16D6C57E18206A020051DCD3 /* Main.storyboard */; };
-		16D6C58318206A020051DCD3 /* QTRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D6C58218206A020051DCD3 /* QTRViewController.m */; };
+		16D6C58318206A020051DCD3 /* QTRiOSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D6C58218206A020051DCD3 /* QTRiOSViewController.m */; };
 		16D6C58518206A020051DCD3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16D6C58418206A020051DCD3 /* Images.xcassets */; };
 		16D6C58C18206A020051DCD3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D6C58B18206A020051DCD3 /* XCTest.framework */; };
 		16D6C58D18206A020051DCD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D6C56C18206A020051DCD3 /* Foundation.framework */; };
@@ -27,10 +44,17 @@
 		16D6C5A218206A180051DCD3 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D6C5A118206A180051DCD3 /* AddressBook.framework */; };
 		16D6C5A418206A240051DCD3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D6C5A318206A240051DCD3 /* MapKit.framework */; };
 		16E037BD1821B96E0061E9D1 /* QTRQatarMapOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E037BC1821B96E0061E9D1 /* QTRQatarMapOverlay.m */; };
-		16E037C01821BAB30061E9D1 /* QTRQatarMapOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E037BF1821BAB30061E9D1 /* QTRQatarMapOverlayView.m */; };
+		16E037C01821BAB30061E9D1 /* QTRiOSQatarMapOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E037BF1821BAB30061E9D1 /* QTRiOSQatarMapOverlayView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		16002B32182843D400452358 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16D6C56118206A020051DCD3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16002B14182843D400452358;
+			remoteInfo = Rad_OSX_Map_Test;
+		};
 		16D6C58F18206A020051DCD3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 16D6C56118206A020051DCD3 /* Project object */;
@@ -41,15 +65,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16002B15182843D400452358 /* Rad_OSX_Map_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rad_OSX_Map_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16002B19182843D400452358 /* Rad_OSX_Map_Test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Rad_OSX_Map_Test-Info.plist"; sourceTree = "<group>"; };
+		16002B1B182843D400452358 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		16002B1D182843D400452358 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		16002B1F182843D400452358 /* Rad_OSX_Map_Test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rad_OSX_Map_Test-Prefix.pch"; sourceTree = "<group>"; };
+		16002B21182843D400452358 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		16002B23182843D400452358 /* QTRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTRAppDelegate.h; sourceTree = "<group>"; };
+		16002B24182843D400452358 /* QTRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTRAppDelegate.m; sourceTree = "<group>"; };
+		16002B27182843D400452358 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		16002B29182843D400452358 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		16002B2F182843D400452358 /* Rad_OSX_Map_TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Rad_OSX_Map_TestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		16002B36182843D400452358 /* Rad_OSX_Map_TestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Rad_OSX_Map_TestTests-Info.plist"; sourceTree = "<group>"; };
+		16002B38182843D400452358 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		16002B3A182843D400452358 /* Rad_OSX_Map_TestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Rad_OSX_Map_TestTests.m; sourceTree = "<group>"; };
+		16002B431828489E00452358 /* QTROSXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTROSXViewController.m; sourceTree = "<group>"; };
+		16002B441828489E00452358 /* QTROSXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTROSXViewController.h; sourceTree = "<group>"; };
+		16002B4618284ABD00452358 /* QTROSXQatarMapOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTROSXQatarMapOverlayView.m; sourceTree = "<group>"; };
+		16002B4718284ABD00452358 /* QTROSXQatarMapOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTROSXQatarMapOverlayView.h; sourceTree = "<group>"; };
 		160F56C51827F61F00B31F1D /* QFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QFlag.png; sourceTree = "<group>"; };
 		160F56CF18280F7500B31F1D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		160F56D018280F7500B31F1D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		160F56D118280F7500B31F1D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		160F575F1828408000B31F1D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		161C2D6B18241E3000AA63F7 /* QTRStartingRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTRStartingRegion.h; sourceTree = "<group>"; };
-		161C2D6C18241E3000AA63F7 /* QTRStartingRegion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTRStartingRegion.m; sourceTree = "<group>"; };
-		169B45EE1821AB9F00B61B59 /* Qatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Qatar.h; sourceTree = "<group>"; };
-		169B45EF1821AB9F00B61B59 /* Qatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Qatar.m; sourceTree = "<group>"; };
+		161C2D6B18241E3000AA63F7 /* QTRStartingRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QTRStartingRegion.h; path = Common_Classes/QTRStartingRegion.h; sourceTree = "<group>"; };
+		161C2D6C18241E3000AA63F7 /* QTRStartingRegion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QTRStartingRegion.m; path = Common_Classes/QTRStartingRegion.m; sourceTree = "<group>"; };
+		169B45EE1821AB9F00B61B59 /* Qatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Qatar.h; path = Common_Classes/Qatar.h; sourceTree = "<group>"; };
+		169B45EF1821AB9F00B61B59 /* Qatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Qatar.m; path = Common_Classes/Qatar.m; sourceTree = "<group>"; };
 		16D6C56918206A020051DCD3 /* Rad_IOS_MapTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rad_IOS_MapTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16D6C56C18206A020051DCD3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		16D6C56E18206A020051DCD3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -61,8 +103,8 @@
 		16D6C57B18206A020051DCD3 /* QTRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTRAppDelegate.h; sourceTree = "<group>"; };
 		16D6C57C18206A020051DCD3 /* QTRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTRAppDelegate.m; sourceTree = "<group>"; };
 		16D6C57F18206A020051DCD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		16D6C58118206A020051DCD3 /* QTRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTRViewController.h; sourceTree = "<group>"; };
-		16D6C58218206A020051DCD3 /* QTRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTRViewController.m; sourceTree = "<group>"; };
+		16D6C58118206A020051DCD3 /* QTRiOSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTRiOSViewController.h; sourceTree = "<group>"; };
+		16D6C58218206A020051DCD3 /* QTRiOSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTRiOSViewController.m; sourceTree = "<group>"; };
 		16D6C58418206A020051DCD3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		16D6C58A18206A020051DCD3 /* Rad_IOS_MapTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Rad_IOS_MapTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16D6C58B18206A020051DCD3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -71,13 +113,30 @@
 		16D6C59718206A020051DCD3 /* Rad_IOS_MapTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Rad_IOS_MapTestTests.m; sourceTree = "<group>"; };
 		16D6C5A118206A180051DCD3 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		16D6C5A318206A240051DCD3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		16E037BB1821B96E0061E9D1 /* QTRQatarMapOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTRQatarMapOverlay.h; sourceTree = "<group>"; };
-		16E037BC1821B96E0061E9D1 /* QTRQatarMapOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTRQatarMapOverlay.m; sourceTree = "<group>"; };
-		16E037BE1821BAB30061E9D1 /* QTRQatarMapOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTRQatarMapOverlayView.h; sourceTree = "<group>"; };
-		16E037BF1821BAB30061E9D1 /* QTRQatarMapOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTRQatarMapOverlayView.m; sourceTree = "<group>"; };
+		16E037BB1821B96E0061E9D1 /* QTRQatarMapOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QTRQatarMapOverlay.h; path = Rad_IOS_MapTest/QTRQatarMapOverlay.h; sourceTree = "<group>"; };
+		16E037BC1821B96E0061E9D1 /* QTRQatarMapOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QTRQatarMapOverlay.m; path = Rad_IOS_MapTest/QTRQatarMapOverlay.m; sourceTree = "<group>"; };
+		16E037BE1821BAB30061E9D1 /* QTRiOSQatarMapOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTRiOSQatarMapOverlayView.h; sourceTree = "<group>"; };
+		16E037BF1821BAB30061E9D1 /* QTRiOSQatarMapOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTRiOSQatarMapOverlayView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		16002B12182843D400452358 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16002B16182843D400452358 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16002B2C182843D400452358 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16002B31182843D400452358 /* Cocoa.framework in Frameworks */,
+				16002B30182843D400452358 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		16D6C56618206A020051DCD3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -103,6 +162,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16002B17182843D400452358 /* Rad_OSX_Map_Test */ = {
+			isa = PBXGroup;
+			children = (
+				16002B23182843D400452358 /* QTRAppDelegate.h */,
+				16002B24182843D400452358 /* QTRAppDelegate.m */,
+				16002B421828484300452358 /* OSX_Classes */,
+				16002B26182843D400452358 /* MainMenu.xib */,
+				16002B29182843D400452358 /* Images.xcassets */,
+				16002B18182843D400452358 /* Supporting Files */,
+			);
+			path = Rad_OSX_Map_Test;
+			sourceTree = "<group>";
+		};
+		16002B18182843D400452358 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				16002B19182843D400452358 /* Rad_OSX_Map_Test-Info.plist */,
+				16002B1A182843D400452358 /* InfoPlist.strings */,
+				16002B1D182843D400452358 /* main.m */,
+				16002B1F182843D400452358 /* Rad_OSX_Map_Test-Prefix.pch */,
+				16002B20182843D400452358 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		16002B34182843D400452358 /* Rad_OSX_Map_TestTests */ = {
+			isa = PBXGroup;
+			children = (
+				16002B3A182843D400452358 /* Rad_OSX_Map_TestTests.m */,
+				16002B35182843D400452358 /* Supporting Files */,
+			);
+			path = Rad_OSX_Map_TestTests;
+			sourceTree = "<group>";
+		};
+		16002B35182843D400452358 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				16002B36182843D400452358 /* Rad_OSX_Map_TestTests-Info.plist */,
+				16002B37182843D400452358 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		16002B421828484300452358 /* OSX_Classes */ = {
+			isa = PBXGroup;
+			children = (
+				16002B4618284ABD00452358 /* QTROSXQatarMapOverlayView.m */,
+				16002B4718284ABD00452358 /* QTROSXQatarMapOverlayView.h */,
+				16002B431828489E00452358 /* QTROSXViewController.m */,
+				16002B441828489E00452358 /* QTROSXViewController.h */,
+			);
+			path = OSX_Classes;
+			sourceTree = "<group>";
+		};
 		160F56CE18280F7500B31F1D /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,13 +237,25 @@
 			name = Regions;
 			sourceTree = "<group>";
 		};
+		16A283E2182850DD008B41E0 /* Common_Classes */ = {
+			isa = PBXGroup;
+			children = (
+				16E037BB1821B96E0061E9D1 /* QTRQatarMapOverlay.h */,
+				16E037BC1821B96E0061E9D1 /* QTRQatarMapOverlay.m */,
+			);
+			name = Common_Classes;
+			sourceTree = "<group>";
+		};
 		16D6C56018206A020051DCD3 = {
 			isa = PBXGroup;
 			children = (
+				16A283E2182850DD008B41E0 /* Common_Classes */,
 				160F56C51827F61F00B31F1D /* QFlag.png */,
 				161C2D6A18241E1A00AA63F7 /* Regions */,
 				16D6C57218206A020051DCD3 /* Rad_IOS_MapTest */,
 				16D6C59118206A020051DCD3 /* Rad_IOS_MapTestTests */,
+				16002B17182843D400452358 /* Rad_OSX_Map_Test */,
+				16002B34182843D400452358 /* Rad_OSX_Map_TestTests */,
 				16D6C56B18206A020051DCD3 /* Frameworks */,
 				16D6C56A18206A020051DCD3 /* Products */,
 			);
@@ -141,6 +266,8 @@
 			children = (
 				16D6C56918206A020051DCD3 /* Rad_IOS_MapTest.app */,
 				16D6C58A18206A020051DCD3 /* Rad_IOS_MapTestTests.xctest */,
+				16002B15182843D400452358 /* Rad_OSX_Map_Test.app */,
+				16002B2F182843D400452358 /* Rad_OSX_Map_TestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,12 +293,10 @@
 				16D6C57B18206A020051DCD3 /* QTRAppDelegate.h */,
 				16D6C57C18206A020051DCD3 /* QTRAppDelegate.m */,
 				16D6C57E18206A020051DCD3 /* Main.storyboard */,
-				16D6C58118206A020051DCD3 /* QTRViewController.h */,
-				16D6C58218206A020051DCD3 /* QTRViewController.m */,
-				16E037BB1821B96E0061E9D1 /* QTRQatarMapOverlay.h */,
-				16E037BC1821B96E0061E9D1 /* QTRQatarMapOverlay.m */,
-				16E037BE1821BAB30061E9D1 /* QTRQatarMapOverlayView.h */,
-				16E037BF1821BAB30061E9D1 /* QTRQatarMapOverlayView.m */,
+				16D6C58118206A020051DCD3 /* QTRiOSViewController.h */,
+				16D6C58218206A020051DCD3 /* QTRiOSViewController.m */,
+				16E037BE1821BAB30061E9D1 /* QTRiOSQatarMapOverlayView.h */,
+				16E037BF1821BAB30061E9D1 /* QTRiOSQatarMapOverlayView.m */,
 				16D6C58418206A020051DCD3 /* Images.xcassets */,
 				16D6C57318206A020051DCD3 /* Supporting Files */,
 			);
@@ -210,6 +335,41 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		16002B14182843D400452358 /* Rad_OSX_Map_Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16002B3C182843D500452358 /* Build configuration list for PBXNativeTarget "Rad_OSX_Map_Test" */;
+			buildPhases = (
+				16002B11182843D400452358 /* Sources */,
+				16002B12182843D400452358 /* Frameworks */,
+				16002B13182843D400452358 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rad_OSX_Map_Test;
+			productName = Rad_OSX_Map_Test;
+			productReference = 16002B15182843D400452358 /* Rad_OSX_Map_Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		16002B2E182843D400452358 /* Rad_OSX_Map_TestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16002B3F182843D500452358 /* Build configuration list for PBXNativeTarget "Rad_OSX_Map_TestTests" */;
+			buildPhases = (
+				16002B2B182843D400452358 /* Sources */,
+				16002B2C182843D400452358 /* Frameworks */,
+				16002B2D182843D400452358 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16002B33182843D400452358 /* PBXTargetDependency */,
+			);
+			name = Rad_OSX_Map_TestTests;
+			productName = Rad_OSX_Map_TestTests;
+			productReference = 16002B2F182843D400452358 /* Rad_OSX_Map_TestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		16D6C56818206A020051DCD3 /* Rad_IOS_MapTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 16D6C59B18206A020051DCD3 /* Build configuration list for PBXNativeTarget "Rad_IOS_MapTest" */;
@@ -255,6 +415,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = db;
 				TargetAttributes = {
+					16002B2E182843D400452358 = {
+						TestTargetID = 16D6C56818206A020051DCD3;
+					};
 					16D6C58918206A020051DCD3 = {
 						TestTargetID = 16D6C56818206A020051DCD3;
 					};
@@ -275,11 +438,33 @@
 			targets = (
 				16D6C56818206A020051DCD3 /* Rad_IOS_MapTest */,
 				16D6C58918206A020051DCD3 /* Rad_IOS_MapTestTests */,
+				16002B14182843D400452358 /* Rad_OSX_Map_Test */,
+				16002B2E182843D400452358 /* Rad_OSX_Map_TestTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		16002B13182843D400452358 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16002B1C182843D400452358 /* InfoPlist.strings in Resources */,
+				16002B2A182843D400452358 /* Images.xcassets in Resources */,
+				16002B22182843D400452358 /* Credits.rtf in Resources */,
+				16A283E118284E54008B41E0 /* QFlag.png in Resources */,
+				16002B28182843D400452358 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16002B2D182843D400452358 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16002B39182843D400452358 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		16D6C56718206A020051DCD3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -302,6 +487,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		16002B11182843D400452358 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16002B25182843D400452358 /* QTRAppDelegate.m in Sources */,
+				16A283DF18284C9B008B41E0 /* QTRStartingRegion.m in Sources */,
+				16002B451828489E00452358 /* QTROSXViewController.m in Sources */,
+				16002B4818284ABD00452358 /* QTROSXQatarMapOverlayView.m in Sources */,
+				16A283DE18284C91008B41E0 /* Qatar.m in Sources */,
+				16A283E018284DF0008B41E0 /* QTRQatarMapOverlay.m in Sources */,
+				16002B1E182843D400452358 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16002B2B182843D400452358 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16002B3B182843D400452358 /* Rad_OSX_Map_TestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		16D6C56518206A020051DCD3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -310,8 +517,8 @@
 				16D6C57D18206A020051DCD3 /* QTRAppDelegate.m in Sources */,
 				169B45F01821AB9F00B61B59 /* Qatar.m in Sources */,
 				161C2D6D18241E3000AA63F7 /* QTRStartingRegion.m in Sources */,
-				16D6C58318206A020051DCD3 /* QTRViewController.m in Sources */,
-				16E037C01821BAB30061E9D1 /* QTRQatarMapOverlayView.m in Sources */,
+				16D6C58318206A020051DCD3 /* QTRiOSViewController.m in Sources */,
+				16E037C01821BAB30061E9D1 /* QTRiOSQatarMapOverlayView.m in Sources */,
 				16D6C57918206A020051DCD3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,6 +534,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		16002B33182843D400452358 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16002B14182843D400452358 /* Rad_OSX_Map_Test */;
+			targetProxy = 16002B32182843D400452358 /* PBXContainerItemProxy */;
+		};
 		16D6C59018206A020051DCD3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 16D6C56818206A020051DCD3 /* Rad_IOS_MapTest */;
@@ -335,6 +547,38 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		16002B1A182843D400452358 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16002B1B182843D400452358 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		16002B20182843D400452358 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16002B21182843D400452358 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		16002B26182843D400452358 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16002B27182843D400452358 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		16002B37182843D400452358 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16002B38182843D400452358 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		16D6C57518206A020051DCD3 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -362,6 +606,94 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		16002B3D182843D500452358 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer: Evan Schechtman (9CX47B52KR)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Rad_OSX_Map_Test/Rad_OSX_Map_Test-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Rad_OSX_Map_Test/Rad_OSX_Map_Test-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "AD0CDA64-FFEA-4FD7-8886-4491DF923C1E";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		16002B3E182843D500452358 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer: Evan Schechtman (9CX47B52KR)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Rad_OSX_Map_Test/Rad_OSX_Map_Test-Prefix.pch";
+				INFOPLIST_FILE = "Rad_OSX_Map_Test/Rad_OSX_Map_Test-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "AD0CDA64-FFEA-4FD7-8886-4491DF923C1E";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		16002B40182843D500452358 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Rad_IOS_MapTest.app/Rad_IOS_MapTest";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Rad_OSX_Map_Test/Rad_OSX_Map_Test-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Rad_OSX_Map_TestTests/Rad_OSX_Map_TestTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		16002B41182843D500452358 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Rad_IOS_MapTest.app/Rad_IOS_MapTest";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Rad_OSX_Map_Test/Rad_OSX_Map_Test-Prefix.pch";
+				INFOPLIST_FILE = "Rad_OSX_Map_TestTests/Rad_OSX_Map_TestTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 		16D6C59918206A020051DCD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -519,6 +851,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		16002B3C182843D500452358 /* Build configuration list for PBXNativeTarget "Rad_OSX_Map_Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16002B3D182843D500452358 /* Debug */,
+				16002B3E182843D500452358 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16002B3F182843D500452358 /* Build configuration list for PBXNativeTarget "Rad_OSX_Map_TestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16002B40182843D500452358 /* Debug */,
+				16002B41182843D500452358 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		16D6C56418206A020051DCD3 /* Build configuration list for PBXProject "Rad_IOS_MapTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

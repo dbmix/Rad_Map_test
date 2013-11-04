@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-@class QTRViewController;
+@class QTRiOSViewController;
 
 @interface QTRAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) QTRViewController *QTRMapController;
+@property (strong, nonatomic) QTRiOSViewController *QTRMapController;
 
 @end

@@ -1,21 +1,21 @@
 //
-//  QTRQatarMapOverlayView.m
+//  QTRiOSQatarMapOverlayView.m
 //  Rad_IOS_MapTest
 //
 //  Created by Developer Station 05 on 10/30/13.
 //  Copyright (c) 2013 db. All rights reserved.
 //
 
-#import "QTRQatarMapOverlayView.h"
+#import "QTRiOSQatarMapOverlayView.h"
 
 
-@interface QTRQatarMapOverlayView ()
+@interface QTRiOSQatarMapOverlayView ()
 
 @property (nonatomic, strong) UIImage *overlayImage;
 
 @end
 
-@implementation QTRQatarMapOverlayView
+@implementation QTRiOSQatarMapOverlayView
 
 - (instancetype)initWithOverlay:(id<MKOverlay>)overlay overlayImage:(UIImage *)overlayImage {
     self = [super initWithOverlay:overlay];

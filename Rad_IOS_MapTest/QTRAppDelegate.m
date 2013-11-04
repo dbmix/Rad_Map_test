@@ -7,7 +7,7 @@
 //
 
 #import "QTRAppDelegate.h"
-#import "QTRViewController.h"
+#import "QTRiOSViewController.h"
 
 @implementation QTRAppDelegate
 
@@ -17,8 +17,8 @@
     NSLog(@"target is %@",[[[NSProcessInfo processInfo] environment] objectForKey:@"TARGET"]);
         // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-        //self.QTRMapController = [[QTRViewController alloc] initWithNibName:@"Main" bundle:nil];
-    self.QTRMapController = [[QTRViewController alloc] init];
+        //self.QTRMapController = [[QTRiOSViewController alloc] initWithNibName:@"Main" bundle:nil];
+    self.QTRMapController = [[QTRiOSViewController alloc] init];
     self.window.rootViewController = self.QTRMapController;
     [self.window makeKeyAndVisible];
     
