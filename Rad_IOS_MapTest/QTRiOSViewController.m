@@ -38,6 +38,7 @@ bool graphicOverlay = NO;
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.QTRView = [[MKMapView alloc] init];
+    self.QTRView.showsUserLocation = NO;
     self.view = self.QTRView;
     MKCoordinateRegion region = [QTRStartingRegion startingRegion];
     [self.QTRView setRegion:region animated:NO];

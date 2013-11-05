@@ -6,6 +6,9 @@
 //  Copyright (c) 2013 db. All rights reserved.
 //
 
+    //#define IOS			defined(__IPHONE_OS_VERSION_MAX_ALLOWED)
+#ifdef IS_IOS
+
 #import <UIKit/UIKit.h>
 @class QTRiOSViewController;
 
@@ -15,3 +18,5 @@
 @property (strong, nonatomic) QTRiOSViewController *QTRMapController;
 
 @end
+
+#endif

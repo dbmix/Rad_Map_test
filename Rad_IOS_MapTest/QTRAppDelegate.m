@@ -6,10 +6,12 @@
 //  Copyright (c) 2013 db. All rights reserved.
 //
 
+
 #import "QTRAppDelegate.h"
 #import "QTRiOSViewController.h"
 
 @implementation QTRAppDelegate
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -24,6 +26,9 @@
     
     return YES;
 }
+
+
+
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {

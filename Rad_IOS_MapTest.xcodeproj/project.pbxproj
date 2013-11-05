@@ -619,8 +619,13 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = "Rad_OSX_Map_Test/Rad_OSX_Map_Test-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				New_Setting = "OSX=1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "AD0CDA64-FFEA-4FD7-8886-4491DF923C1E";
 				SDKROOT = macosx;
@@ -638,8 +643,11 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Rad_OSX_Map_Test/Rad_OSX_Map_Test-Prefix.pch";
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "";
 				INFOPLIST_FILE = "Rad_OSX_Map_Test/Rad_OSX_Map_Test-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				New_Setting = "";
+				"New_Setting[arch=*]" = "OSX=1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "AD0CDA64-FFEA-4FD7-8886-4491DF923C1E";
 				SDKROOT = macosx;
@@ -729,6 +737,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				New_Setting = "";
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -765,6 +774,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				New_Setting = "";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -781,6 +791,11 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Rad_IOS_MapTest/Rad_IOS_MapTest-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"IS_IOS=$(IS_IOS)",
+				);
 				INFOPLIST_FILE = "Rad_IOS_MapTest/Rad_IOS_MapTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "57543B1B-7C02-48A4-8DCB-B8D2AC720428";
@@ -798,6 +813,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Rad_IOS_MapTest/Rad_IOS_MapTest-Prefix.pch";
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "";
 				INFOPLIST_FILE = "Rad_IOS_MapTest/Rad_IOS_MapTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "57543B1B-7C02-48A4-8DCB-B8D2AC720428";

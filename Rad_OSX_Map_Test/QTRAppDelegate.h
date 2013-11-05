@@ -14,6 +14,6 @@
 
 @property (strong, nonatomic) NSWindow *window;
 @property (strong, nonatomic) QTROSXViewController *QTRMapController;
-@property (weak) IBOutlet MKMapView *mapView;
+    //@property (weak) IBOutlet MKMapView *mapView;
 
 @end

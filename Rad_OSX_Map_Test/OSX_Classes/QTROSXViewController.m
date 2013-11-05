@@ -41,6 +41,7 @@ bool graphicOverlay = NO;
             // Initialization code here.
             //self.QTRView = [[MKMapView alloc] initWithFrame:NSRectFromCGRect(CGRectMake(0.0, 0.0, 400, 400))];
         self.QTRView = [[MKMapView alloc] initWithFrame:windowFrame];
+        self.QTRView.showsUserLocation = NO;
 
         self.view = self.QTRView;
         MKCoordinateRegion region = [QTRStartingRegion startingRegion];
@@ -86,69 +87,6 @@ bool graphicOverlay = NO;
     return self;
 }
 
-/*
--(void)loadView {
-    NSLog(@"loadview");
-}
-
-- (void)windowWillLoad
-{
-    NSLog(@"windowDidLoad");
-        //[super viewDidLoad];
-        // Do any additional setup after loading the view, typically from a nib.
-//    self.QTRView = [[MKMapView alloc] init];
-//    self.view = self.QTRView;
-        //CLLocationCoordinate2D startCenter;
-        //MKCoordinateSpan startSpan;
-        //startCenter.latitude = 40.697488;
-        // startCenter.longitude = -73.97968;
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(
-                                                                   CLLocationCoordinate2DMake(24.2, 45.1), 2500000, 2500000);
-    [self.QTRView setRegion:region animated:NO];
-    self.QTRView.delegate = self;
-
-    self.qatar = [[Qatar alloc] initWithRegion];
-
-
-
-}
--(void) windowDidLoad{
-    NSLog(@"windowDidLoad");
-        //-(void)viewDidAppear:(BOOL)animated{
-        //[super viewDidAppear:animated];
-        //CGRect scrn = [[NSScreen mainScreen] bounds];
-
-//    if (([[UIDevice currentDevice] orientation] == CIDeviceOrientationLandscapeLeft) ||
-//        ([[UIDevice currentDevice] orientation] == CIDeviceOrientationLandscapeRight)) {
-//        self.QTRButton = [[NSButton alloc] initWithFrame:CGRectMake(30, scrn.size.height -320 , 120, 40)];
-//        self.QTRFlag = [[NSButton alloc] initWithFrame:CGRectMake(180, scrn.size.height -320 , 120, 40)];
-//        NSLog(@"Button frame = %@", NSStringFromCGRect(self.QTRButton.frame));
-//} else {
-        self.QTRButton = [[NSButton alloc] initWithFrame:CGRectMake(30, 50 , 120, 40)];
-        self.QTRFlag = [[NSButton alloc] initWithFrame:CGRectMake(180, 50 , 120, 40)];
-
-        // NSLog(@"Button frame = %@", NSStringFromCGRect(self.QTRButton.frame));
-
-
-
-        //self.QTRButton.backgroundColor = [CIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
-    [self.QTRButton setTitle:@"Qatar"] ;//] forState:UIControlStateNormal];
-                                        //[self.QTRButton setTitleColor:[CIColor colorWithRed:0.6 green:0.6 blue:1.0 alpha:1.0]];
-                                        //self.QTRButton.titleLabel.textColor = [[CIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0]];
-                                        //[self.QTRButton addTarget:self action:@selector(zoomToQatarWithAnnotations) forControlEvents:UIControlEventTouchDown];
-    [self.QTRButton setAction:@selector(zoomToQatarWithAnnotations)];
-    [self.view addSubview:self.QTRButton];
-
-        //self.QTRFlag.backgroundColor = [UIColor whiteColor];
-    [self.QTRFlag setTitle:@"Flag"];// forState:UIControlStateNormal];
-     //[self.QTRFlag setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-     //self.QTRFlag.titleLabel.textColor = [UIColor blackColor];
-     //[self.QTRFlag addTarget:self action:@selector(addFlagOverlay) forControlEvents:UIControlEventTouchDown];
-    [self.QTRFlag setAction:@selector(addFlagOverlay)];
-    [self.view addSubview:self.QTRFlag];
-
-
-} */
 
 -(void) zoomToQatarWithAnnotations {
 
