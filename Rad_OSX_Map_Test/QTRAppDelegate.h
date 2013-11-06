@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 @class QTROSXViewController;
-@class MKMapView;
+    //@class MKMapView;
 
 @interface QTRAppDelegate : NSObject <NSApplicationDelegate>
 

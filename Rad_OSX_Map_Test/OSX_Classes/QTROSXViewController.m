@@ -11,7 +11,7 @@
 #import <MapKit/MapKit.h>
     //#import <AddressBook/AddressBook.h>
 #import "Qatar.h"
-#import "QTROSXQatarMapOverlayView.h"
+#import "QTRQatarMapOverlayView.h"
 #import "QTRQatarMapOverlay.h"
 #import "QTRStartingRegion.h"
 
@@ -130,7 +130,7 @@ bool graphicOverlay = NO;
         //UIColor *purpleColor = [UIColor colorWithRed:0.149f green:0.0f blue:0.40f alpha:1.0f];
     if ([overlay isKindOfClass:QTRQatarMapOverlay.class]) {
         NSImage *QFlag = [NSImage imageNamed:@"QFlag"];
-        QTROSXQatarMapOverlayView *overlayView = [[QTROSXQatarMapOverlayView alloc] initWithOverlay:overlay overlayImage:QFlag];
+        QTRQatarMapOverlayView *overlayView = [[QTRQatarMapOverlayView alloc] initWithOverlay:overlay overlayImage:QFlag];
         overlayView.alpha = 0.5;
         return overlayView;
     }
@@ -144,14 +144,14 @@ bool graphicOverlay = NO;
 }
 
 
-
+/*
 -(MKPointAnnotation *)createAnnotationAtCordinate:(CLLocationCoordinate2D) coord{
     MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
     point.coordinate = coord;
     [[self.QTRView viewForAnnotation:point] setHidden:YES];
     return point;
 }
-
+*/
 
 - (void)addFlagOverlay {
     if (graphicOverlay) {

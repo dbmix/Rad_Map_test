@@ -1,23 +1,22 @@
 //
-//  QTRiOSQatarMapOverlayView.m
+//  QTRQatarMapOverlayView.m
 //  Rad_IOS_MapTest
 //
 //  Created by Developer Station 05 on 10/30/13.
 //  Copyright (c) 2013 db. All rights reserved.
 //
 
-#import "QTRiOSQatarMapOverlayView.h"
+#import "QTRQatarMapOverlayView.h"
 
+@interface QTRQatarMapOverlayView ()
 
-@interface QTRiOSQatarMapOverlayView ()
-
-@property (nonatomic, strong) UIImage *overlayImage;
+@property (nonatomic, strong) IMAGE *overlayImage;
 
 @end
 
-@implementation QTRiOSQatarMapOverlayView
+@implementation QTRQatarMapOverlayView
 
-- (instancetype)initWithOverlay:(id<MKOverlay>)overlay overlayImage:(UIImage *)overlayImage {
+- (instancetype)initWithOverlay:(id<MKOverlay>)overlay overlayImage:(IMAGE *)overlayImage {
     self = [super initWithOverlay:overlay];
     if (self) {
         _overlayImage = overlayImage;
@@ -27,10 +26,17 @@
 }
 
 - (void)drawMapRect:(MKMapRect)mapRect zoomScale:(MKZoomScale)zoomScale inContext:(CGContextRef)context {
-    CGImageRef imageReference = self.overlayImage.CGImage;
 
     MKMapRect theMapRect = self.overlay.boundingMapRect;
+
+#ifdef IS_IOS
     CGRect theRect = [self rectForMapRect:theMapRect];
+    CGImageRef imageReference = self.overlayImage.CGImage;
+#endif
+#ifdef IS_OSX
+    NSRect theRect = NSRectFromCGRect([self rectForMapRect:theMapRect]);
+    CGImageRef imageReference = [self.overlayImage CGImageForProposedRect:&theRect context:(__bridge NSGraphicsContext *)(context) hints:nil];
+#endif
 
     CGContextScaleCTM(context, 1.0, -1.0);
     CGContextTranslateCTM(context, 0.0, -theRect.size.height);

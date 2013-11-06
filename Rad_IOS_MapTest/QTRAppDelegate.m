@@ -7,11 +7,41 @@
 //
 
 
+
 #import "QTRAppDelegate.h"
-#import "QTRiOSViewController.h"
+
+    //#ifdef IS_IOS
+#import "QTRViewController.h"
+    //#endif
+
+    //#ifdef IS_OSX
+    //#import "QTROSXViewController.h"
+    //#endif
 
 @implementation QTRAppDelegate
 
+
+#ifdef IS_OSX
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+{
+        // Insert code here to initialize your application
+    NSLog(@"target is %@",[[[NSProcessInfo processInfo] environment] objectForKey:@"TARGET"]);
+
+    [self.window setFrame:NSRectFromCGRect(CGRectMake(300, 300, 1000, 1000)) display:YES];
+    NSRect windoh = self.window.frame;
+    self.QTRMapController = [[QTRViewController alloc] initWithNibName:nil bundle:nil windowFrame:windoh];
+    [self.window.contentView addSubview:self.QTRMapController.view];
+    NSDictionary *views = @{@"contentView": self.window.contentView, @"mapView": self.QTRMapController.view};
+    [self.QTRMapController.view setTranslatesAutoresizingMaskIntoConstraints:NO];
+    NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-5-[mapView]-5-|" options:0 metrics:nil views:views];
+    constraints = [constraints arrayByAddingObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-5-[mapView]-5-|" options:0 metrics:nil views:views]];
+    [self.window.contentView addConstraints:constraints];
+    self.window.delegate = self.QTRMapController;
+    
+}
+#endif
+
+#ifdef IS_IOS
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -19,8 +49,7 @@
     NSLog(@"target is %@",[[[NSProcessInfo processInfo] environment] objectForKey:@"TARGET"]);
         // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-        //self.QTRMapController = [[QTRiOSViewController alloc] initWithNibName:@"Main" bundle:nil];
-    self.QTRMapController = [[QTRiOSViewController alloc] init];
+    self.QTRMapController = [[QTRViewController alloc] init];
     self.window.rootViewController = self.QTRMapController;
     [self.window makeKeyAndVisible];
     
@@ -56,5 +85,7 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+#endif
 
 @end

@@ -7,16 +7,24 @@
 //
 
     //#define IOS			defined(__IPHONE_OS_VERSION_MAX_ALLOWED)
+
+#import "QTRMacros.h"
+
 #ifdef IS_IOS
-
 #import <UIKit/UIKit.h>
-@class QTRiOSViewController;
+#endif
 
-@interface QTRAppDelegate : UIResponder <UIApplicationDelegate>
+#ifdef IS_OSX
 
-@property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) QTRiOSViewController *QTRMapController;
+#import <Cocoa/Cocoa.h>
+#endif
+
+@class MAPVIEWCONTROLLER;
+
+@interface QTRAppDelegate : APP_CLASS <APP_DELEGATE>
+
+@property (strong, nonatomic) WINDOW *window;
+@property (strong, nonatomic) MAPVIEWCONTROLLER *QTRMapController;
 
 @end
 
-#endif

@@ -9,7 +9,7 @@
 
 #import "QTRAppDelegate.h"
 #import "QTROSXViewController.h"
-#import <MapKit/MapKit.h>
+    //#import <MapKit/MapKit.h>
 
 
 @implementation QTRAppDelegate
