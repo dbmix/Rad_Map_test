@@ -14,6 +14,9 @@
 #import "QTRQatarMapOverlayView.h"
 #import "QTRQatarMapOverlay.h"
 #import "QTRStartingRegion.h"
+#import "QTRParks.h"
+#import "QTRParkMapItem.h"
+#import "QTRParkAnnotationView.h"
 
 @interface QTRViewController () <MKMapViewDelegate>
 
@@ -33,6 +36,7 @@
 
 bool polyOverlay = NO;
 bool graphicOverlay = NO;
+bool mappingDoha = NO;
 
 #ifdef IS_OSX
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil windowFrame:(NSRect)windowFrame
@@ -151,6 +155,7 @@ bool graphicOverlay = NO;
 
 }
 
+#pragma mark - map actions
 -(void) zoomToQatarWithAnnotations {
 
     if (polyOverlay) {
@@ -188,21 +193,6 @@ bool graphicOverlay = NO;
 
 }
 
--(MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay{
-    if ([overlay isKindOfClass:QTRQatarMapOverlay.class]) {
-        IMAGE *QFlag = [IMAGE imageNamed:@"QFlag"];
-        QTRQatarMapOverlayView *overlayView = [[QTRQatarMapOverlayView alloc] initWithOverlay:overlay overlayImage:QFlag];
-        overlayView.alpha = 0.5;
-        return overlayView;
-    }
-
-    COLOR *fillColor = [COLOR colorWithHue:.5 saturation:.5 brightness:.5 alpha:.5];
-    COLOR *strokeColor = [COLOR colorWithRed:0 green:0 blue:0 alpha:0.5f];
-        self.polyRender = [[MKPolygonRenderer alloc] initWithOverlay:overlay];
-        self.polyRender.strokeColor =strokeColor;
-        self.polyRender.fillColor =fillColor;
-        return self.polyRender;
-}
 
 
 - (void)addFlagOverlay {
@@ -217,8 +207,34 @@ bool graphicOverlay = NO;
 }
 
 - (void) mapDoha {
-    NSLog(@" mapping Doha now");
+        //NSLog(@" mapping Doha now");
+        // MKMapRect rect = [self.QTRView visibleMapRect];
+        //NSLog(@"mapview rectangle before = %f, %f, %f, %f", rect.origin.x, rect.origin.y, rect.size.height, rect.size.width);
+    mappingDoha = YES;
+    [self.QTRView removeOverlays:self.QTRView.overlays];
+    QTRParks *parks = [[QTRParks alloc] init];
+    NSArray *parkItems = [parks arrayOfParks];
+    for (QTRParkMapItem *itm in parkItems) {
+        [self.QTRView addAnnotation:itm];
+    }
+    [self.QTRView showAnnotations:self.QTRView.annotations animated:YES];
+        //rect = [self.QTRView visibleMapRect];
+        //NSLog(@"mapview rectangle after = %f, %f, %f, %f", rect.origin.x, rect.origin.y, rect.size.height, rect.size.width);
+
 }
+
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
+{
+    MKMapRect rect = [self.QTRView visibleMapRect];
+    NSLog(@"mapview rectangle did change = %f, %f, %f, %f", rect.origin.x, rect.origin.y, rect.size.height, rect.size.width);
+    rect.size.width +=8000;
+    rect.size.height +=8000;
+    if (mappingDoha) {
+        [self.QTRView  setVisibleMapRect:rect animated:YES]; }
+    mappingDoha = NO;
+}
+
+
 
 - (void) buttonTitle:(BUTTON *)button title:(NSString *)title
 {
@@ -229,4 +245,52 @@ bool graphicOverlay = NO;
     [button setTitle:title];
 #endif
 }
+
+#pragma mark - delegate methods
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+    if ([annotation isKindOfClass:[MKUserLocation class]])
+        {
+        return nil;  // this should never trigger
+        }
+    if ([annotation isKindOfClass:[QTRParkMapItem class]])  // for Japanese Tea Garden
+        {
+            //static NSString *TeaGardenAnnotationIdentifier = @"TeaGardenAnnotationIdentifier";
+
+        QTRParkAnnotationView *annotationView = [[QTRParkAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:Nil];
+            //(QTRParkAnnotationView *)[self.QTRView dequeueReusableAnnotationViewWithIdentifier:TeaGardenAnnotationIdentifier];
+            //if (annotationView == nil)
+            //{
+            //annotationView = [[QTRParkAnnotationView alloc] initWithAnnotation:annotation]; //reuseIdentifier:TeaGardenAnnotationIdentifier];
+            // }
+        return annotationView;
+        }
+
+    return nil;
+}
+
+
+
+
+-(MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay{
+    if ([overlay isKindOfClass:QTRQatarMapOverlay.class]) {
+        IMAGE *QFlag = [IMAGE imageNamed:@"QFlag"];
+        QTRQatarMapOverlayView *overlayView = [[QTRQatarMapOverlayView alloc] initWithOverlay:overlay overlayImage:QFlag];
+        overlayView.alpha = 0.5;
+        return overlayView;
+    }
+
+    COLOR *fillColor = [COLOR colorWithHue:.5 saturation:.5 brightness:.5 alpha:.5];
+    COLOR *strokeColor = [COLOR colorWithRed:0 green:0 blue:0 alpha:0.5f];
+    self.polyRender = [[MKPolygonRenderer alloc] initWithOverlay:overlay];
+    self.polyRender.strokeColor =strokeColor;
+    self.polyRender.fillColor =fillColor;
+    return self.polyRender;
+}
+
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
+{
+    NSLog(@"annotation was selected");
+}
+
 @end

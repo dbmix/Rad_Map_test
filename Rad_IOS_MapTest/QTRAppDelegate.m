@@ -25,7 +25,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
         // Insert code here to initialize your application
-    NSLog(@"target is %@",[[[NSProcessInfo processInfo] environment] objectForKey:@"TARGET"]);
+        //NSLog(@"target is %@",[[[NSProcessInfo processInfo] environment] objectForKey:@"TARGET"]);
 
     [self.window setFrame:NSRectFromCGRect(CGRectMake(300, 300, 1000, 1000)) display:YES];
     NSRect windoh = self.window.frame;
@@ -57,8 +57,6 @@
 }
 
 
-
-							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -18,6 +18,11 @@
 #define MAPVIEWDELEGATE MKMapViewDelegate
 #define IMAGE UIImage
 #define COLOR UIColor
+#define IMAGEVIEW UIImageView
+#define LABEL UILabel
+#define BACKGROUND self.backgroundColor
+#define FONT UIFont
+#define BEZIERPATH UIBezierPath
 
 #endif
 
@@ -31,5 +36,10 @@
 #define MAPVIEWDELEGATE NSWindowDelegate
 #define IMAGE NSImage
 #define COLOR NSColor
+#define IMAGEVIEW NSImageView
+#define LABEL NSTextField
+#define BACKGROUND self.window.backgroundColor
+#define FONT NSFont
+#define BEZIERPATH NSBezierPath
 
 #endif

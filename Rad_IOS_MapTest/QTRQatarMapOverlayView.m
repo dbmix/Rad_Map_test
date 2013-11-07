@@ -41,6 +41,7 @@
     CGContextScaleCTM(context, 1.0, -1.0);
     CGContextTranslateCTM(context, 0.0, -theRect.size.height);
     CGContextDrawImage(context, theRect, imageReference);
+        //CGImageRelease(imageReference);
 }
 
 @end

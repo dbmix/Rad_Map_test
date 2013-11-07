@@ -18,10 +18,28 @@
 		16002B39182843D400452358 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 16002B37182843D400452358 /* InfoPlist.strings */; };
 		16002B3B182843D400452358 /* Rad_OSX_Map_TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 16002B3A182843D400452358 /* Rad_OSX_Map_TestTests.m */; };
 		160F56C61827F61F00B31F1D /* QFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 160F56C51827F61F00B31F1D /* QFlag.png */; };
+		161B8F4E182BEAB30069A50A /* QTRParkMapItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 161B8F4D182BEAB30069A50A /* QTRParkMapItem.m */; };
+		161B8F4F182BEAB30069A50A /* QTRParkMapItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 161B8F4D182BEAB30069A50A /* QTRParkMapItem.m */; };
+		161B8F57182BFA600069A50A /* Al_Bidda_Park.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 161B8F51182BFA600069A50A /* Al_Bidda_Park.jpg */; };
+		161B8F58182BFA600069A50A /* Al_Bidda_Park.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 161B8F51182BFA600069A50A /* Al_Bidda_Park.jpg */; };
+		161B8F59182BFA600069A50A /* Al_Ghanim_Al_Qadeem.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 161B8F52182BFA600069A50A /* Al_Ghanim_Al_Qadeem.jpg */; };
+		161B8F5A182BFA600069A50A /* Al_Ghanim_Al_Qadeem.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 161B8F52182BFA600069A50A /* Al_Ghanim_Al_Qadeem.jpg */; };
+		161B8F5B182BFA600069A50A /* Al_Khulaifat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 161B8F53182BFA600069A50A /* Al_Khulaifat.jpg */; };
+		161B8F5C182BFA600069A50A /* Al_Khulaifat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 161B8F53182BFA600069A50A /* Al_Khulaifat.jpg */; };
+		161B8F5D182BFA600069A50A /* AlMuntazah.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 161B8F54182BFA600069A50A /* AlMuntazah.jpg */; };
+		161B8F5E182BFA600069A50A /* AlMuntazah.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 161B8F54182BFA600069A50A /* AlMuntazah.jpg */; };
+		161B8F5F182BFA600069A50A /* Aspire.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 161B8F55182BFA600069A50A /* Aspire.jpg */; };
+		161B8F60182BFA600069A50A /* Aspire.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 161B8F55182BFA600069A50A /* Aspire.jpg */; };
+		161B8F61182BFA600069A50A /* Salata_Park.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 161B8F56182BFA600069A50A /* Salata_Park.jpg */; };
+		161B8F62182BFA600069A50A /* Salata_Park.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 161B8F56182BFA600069A50A /* Salata_Park.jpg */; };
 		161C2D6D18241E3000AA63F7 /* QTRStartingRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 161C2D6C18241E3000AA63F7 /* QTRStartingRegion.m */; };
 		16308EE7182A94680042A8C3 /* QTRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D6C57C18206A020051DCD3 /* QTRAppDelegate.m */; };
 		1656CE74182AA8AD00B9D18C /* QTRQatarMapOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E037BF1821BAB30061E9D1 /* QTRQatarMapOverlayView.m */; };
 		1656CE8B182AB92700B9D18C /* QTRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D6C58218206A020051DCD3 /* QTRViewController.m */; };
+		1656CE8E182AEDC100B9D18C /* QTRParks.m in Sources */ = {isa = PBXBuildFile; fileRef = 1656CE8D182AEDC100B9D18C /* QTRParks.m */; };
+		1656CE8F182AEDC100B9D18C /* QTRParks.m in Sources */ = {isa = PBXBuildFile; fileRef = 1656CE8D182AEDC100B9D18C /* QTRParks.m */; };
+		1656CE92182AF28400B9D18C /* QTRParkAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1656CE91182AF28300B9D18C /* QTRParkAnnotationView.m */; };
+		1656CE93182AF28400B9D18C /* QTRParkAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1656CE91182AF28300B9D18C /* QTRParkAnnotationView.m */; };
 		169B45F01821AB9F00B61B59 /* Qatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 169B45EF1821AB9F00B61B59 /* Qatar.m */; };
 		16A283DE18284C91008B41E0 /* Qatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 169B45EF1821AB9F00B61B59 /* Qatar.m */; };
 		16A283DF18284C9B008B41E0 /* QTRStartingRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 161C2D6C18241E3000AA63F7 /* QTRStartingRegion.m */; };
@@ -82,9 +100,21 @@
 		160F56D018280F7500B31F1D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		160F56D118280F7500B31F1D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		160F575F1828408000B31F1D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		161B8F4C182BEAB30069A50A /* QTRParkMapItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTRParkMapItem.h; sourceTree = "<group>"; };
+		161B8F4D182BEAB30069A50A /* QTRParkMapItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTRParkMapItem.m; sourceTree = "<group>"; };
+		161B8F51182BFA600069A50A /* Al_Bidda_Park.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Al_Bidda_Park.jpg; sourceTree = "<group>"; };
+		161B8F52182BFA600069A50A /* Al_Ghanim_Al_Qadeem.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Al_Ghanim_Al_Qadeem.jpg; sourceTree = "<group>"; };
+		161B8F53182BFA600069A50A /* Al_Khulaifat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Al_Khulaifat.jpg; sourceTree = "<group>"; };
+		161B8F54182BFA600069A50A /* AlMuntazah.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AlMuntazah.jpg; sourceTree = "<group>"; };
+		161B8F55182BFA600069A50A /* Aspire.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aspire.jpg; sourceTree = "<group>"; };
+		161B8F56182BFA600069A50A /* Salata_Park.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Salata_Park.jpg; sourceTree = "<group>"; };
 		161C2D6B18241E3000AA63F7 /* QTRStartingRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QTRStartingRegion.h; path = Common_Classes/QTRStartingRegion.h; sourceTree = "<group>"; };
 		161C2D6C18241E3000AA63F7 /* QTRStartingRegion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QTRStartingRegion.m; path = Common_Classes/QTRStartingRegion.m; sourceTree = "<group>"; };
 		1656CE76182AAFA600B9D18C /* QTRMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTRMacros.h; sourceTree = "<group>"; };
+		1656CE8C182AEDC100B9D18C /* QTRParks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QTRParks.h; path = Common_Classes/QTRParks.h; sourceTree = "<group>"; };
+		1656CE8D182AEDC100B9D18C /* QTRParks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QTRParks.m; path = Common_Classes/QTRParks.m; sourceTree = "<group>"; };
+		1656CE90182AF28300B9D18C /* QTRParkAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QTRParkAnnotationView.h; path = Common_Classes/QTRParkAnnotationView.h; sourceTree = "<group>"; };
+		1656CE91182AF28300B9D18C /* QTRParkAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QTRParkAnnotationView.m; path = Common_Classes/QTRParkAnnotationView.m; sourceTree = "<group>"; };
 		169B45EE1821AB9F00B61B59 /* Qatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Qatar.h; path = Common_Classes/Qatar.h; sourceTree = "<group>"; };
 		169B45EF1821AB9F00B61B59 /* Qatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Qatar.m; path = Common_Classes/Qatar.m; sourceTree = "<group>"; };
 		16D6C56918206A020051DCD3 /* Rad_IOS_MapTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rad_IOS_MapTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,8 +140,8 @@
 		16D6C5A318206A240051DCD3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		16E037BB1821B96E0061E9D1 /* QTRQatarMapOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QTRQatarMapOverlay.h; path = Rad_IOS_MapTest/QTRQatarMapOverlay.h; sourceTree = "<group>"; };
 		16E037BC1821B96E0061E9D1 /* QTRQatarMapOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QTRQatarMapOverlay.m; path = Rad_IOS_MapTest/QTRQatarMapOverlay.m; sourceTree = "<group>"; };
-		16E037BE1821BAB30061E9D1 /* QTRQatarMapOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTRQatarMapOverlayView.h; sourceTree = "<group>"; };
-		16E037BF1821BAB30061E9D1 /* QTRQatarMapOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTRQatarMapOverlayView.m; sourceTree = "<group>"; };
+		16E037BE1821BAB30061E9D1 /* QTRQatarMapOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QTRQatarMapOverlayView.h; path = Rad_IOS_MapTest/QTRQatarMapOverlayView.h; sourceTree = "<group>"; };
+		16E037BF1821BAB30061E9D1 /* QTRQatarMapOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QTRQatarMapOverlayView.m; path = Rad_IOS_MapTest/QTRQatarMapOverlayView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +245,19 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
+		161B8F50182BFA600069A50A /* Park Resources */ = {
+			isa = PBXGroup;
+			children = (
+				161B8F51182BFA600069A50A /* Al_Bidda_Park.jpg */,
+				161B8F52182BFA600069A50A /* Al_Ghanim_Al_Qadeem.jpg */,
+				161B8F53182BFA600069A50A /* Al_Khulaifat.jpg */,
+				161B8F54182BFA600069A50A /* AlMuntazah.jpg */,
+				161B8F55182BFA600069A50A /* Aspire.jpg */,
+				161B8F56182BFA600069A50A /* Salata_Park.jpg */,
+			);
+			path = "Park Resources";
+			sourceTree = "<group>";
+		};
 		161C2D6A18241E1A00AA63F7 /* Regions */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +265,8 @@
 				161C2D6C18241E3000AA63F7 /* QTRStartingRegion.m */,
 				169B45EE1821AB9F00B61B59 /* Qatar.h */,
 				169B45EF1821AB9F00B61B59 /* Qatar.m */,
+				1656CE8C182AEDC100B9D18C /* QTRParks.h */,
+				1656CE8D182AEDC100B9D18C /* QTRParks.m */,
 			);
 			name = Regions;
 			sourceTree = "<group>";
@@ -229,6 +274,12 @@
 		16A283E2182850DD008B41E0 /* Common_Classes */ = {
 			isa = PBXGroup;
 			children = (
+				161B8F4C182BEAB30069A50A /* QTRParkMapItem.h */,
+				161B8F4D182BEAB30069A50A /* QTRParkMapItem.m */,
+				1656CE90182AF28300B9D18C /* QTRParkAnnotationView.h */,
+				1656CE91182AF28300B9D18C /* QTRParkAnnotationView.m */,
+				16E037BE1821BAB30061E9D1 /* QTRQatarMapOverlayView.h */,
+				16E037BF1821BAB30061E9D1 /* QTRQatarMapOverlayView.m */,
 				16E037BB1821B96E0061E9D1 /* QTRQatarMapOverlay.h */,
 				16E037BC1821B96E0061E9D1 /* QTRQatarMapOverlay.m */,
 			);
@@ -238,6 +289,7 @@
 		16D6C56018206A020051DCD3 = {
 			isa = PBXGroup;
 			children = (
+				161B8F50182BFA600069A50A /* Park Resources */,
 				16A283E2182850DD008B41E0 /* Common_Classes */,
 				160F56C51827F61F00B31F1D /* QFlag.png */,
 				161C2D6A18241E1A00AA63F7 /* Regions */,
@@ -285,8 +337,6 @@
 				16D6C58118206A020051DCD3 /* QTRViewController.h */,
 				16D6C58218206A020051DCD3 /* QTRViewController.m */,
 				1656CE76182AAFA600B9D18C /* QTRMacros.h */,
-				16E037BE1821BAB30061E9D1 /* QTRQatarMapOverlayView.h */,
-				16E037BF1821BAB30061E9D1 /* QTRQatarMapOverlayView.m */,
 				16D6C58418206A020051DCD3 /* Images.xcassets */,
 				16D6C57318206A020051DCD3 /* Supporting Files */,
 			);
@@ -439,11 +489,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				161B8F5A182BFA600069A50A /* Al_Ghanim_Al_Qadeem.jpg in Resources */,
 				16002B1C182843D400452358 /* InfoPlist.strings in Resources */,
 				16002B2A182843D400452358 /* Images.xcassets in Resources */,
+				161B8F60182BFA600069A50A /* Aspire.jpg in Resources */,
+				161B8F62182BFA600069A50A /* Salata_Park.jpg in Resources */,
 				16002B22182843D400452358 /* Credits.rtf in Resources */,
+				161B8F5E182BFA600069A50A /* AlMuntazah.jpg in Resources */,
+				161B8F5C182BFA600069A50A /* Al_Khulaifat.jpg in Resources */,
 				16A283E118284E54008B41E0 /* QFlag.png in Resources */,
 				16002B28182843D400452358 /* MainMenu.xib in Resources */,
+				161B8F58182BFA600069A50A /* Al_Bidda_Park.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,9 +515,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				161B8F59182BFA600069A50A /* Al_Ghanim_Al_Qadeem.jpg in Resources */,
+				161B8F61182BFA600069A50A /* Salata_Park.jpg in Resources */,
 				16D6C58518206A020051DCD3 /* Images.xcassets in Resources */,
+				161B8F5D182BFA600069A50A /* AlMuntazah.jpg in Resources */,
+				161B8F57182BFA600069A50A /* Al_Bidda_Park.jpg in Resources */,
 				16D6C57718206A020051DCD3 /* InfoPlist.strings in Resources */,
 				16D6C58018206A020051DCD3 /* Main.storyboard in Resources */,
+				161B8F5F182BFA600069A50A /* Aspire.jpg in Resources */,
+				161B8F5B182BFA600069A50A /* Al_Khulaifat.jpg in Resources */,
 				160F56C61827F61F00B31F1D /* QFlag.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,7 +548,10 @@
 				16308EE7182A94680042A8C3 /* QTRAppDelegate.m in Sources */,
 				1656CE8B182AB92700B9D18C /* QTRViewController.m in Sources */,
 				16A283DE18284C91008B41E0 /* Qatar.m in Sources */,
+				1656CE8F182AEDC100B9D18C /* QTRParks.m in Sources */,
 				16A283E018284DF0008B41E0 /* QTRQatarMapOverlay.m in Sources */,
+				1656CE93182AF28400B9D18C /* QTRParkAnnotationView.m in Sources */,
+				161B8F4F182BEAB30069A50A /* QTRParkMapItem.m in Sources */,
 				16002B1E182843D400452358 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,7 +573,10 @@
 				169B45F01821AB9F00B61B59 /* Qatar.m in Sources */,
 				161C2D6D18241E3000AA63F7 /* QTRStartingRegion.m in Sources */,
 				16D6C58318206A020051DCD3 /* QTRViewController.m in Sources */,
+				1656CE8E182AEDC100B9D18C /* QTRParks.m in Sources */,
 				16E037C01821BAB30061E9D1 /* QTRQatarMapOverlayView.m in Sources */,
+				1656CE92182AF28400B9D18C /* QTRParkAnnotationView.m in Sources */,
+				161B8F4E182BEAB30069A50A /* QTRParkMapItem.m in Sources */,
 				16D6C57918206A020051DCD3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
