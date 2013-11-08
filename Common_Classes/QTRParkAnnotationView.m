@@ -9,6 +9,9 @@
 #import "QTRMacros.h"
 #import "QTRParkAnnotationView.h"
 #import "QTRParkMapItem.h"
+//#ifdef IS_OSX
+//#define _annotationLabel _annotationLabel.textField
+//#endif
 
 
 static CGFloat kMaxViewWidth = 150.0;
@@ -43,17 +46,17 @@ static CGFloat kRoundBoxLeft = 10.0;
         self.centerOffset = CGPointMake(50.0, 50.0);
 
             // add the annotation's label
-        _annotationLabel = [[LABEL alloc] initWithFrame:CGRectZero];
+        self.annotationLabel = [[LABEL alloc] initWithFrame:CGRectZero];
         QTRParkMapItem *mapItem = (QTRParkMapItem*)self.annotation;
-        self.annotationLabel.font = [FONT systemFontOfSize:9.0];
-        self.annotationLabel.textColor = [COLOR whiteColor];
+        _annotationLabel.font = [FONT systemFontOfSize:9.0];
+        _annotationLabel.textColor = [COLOR whiteColor];
 #ifdef IS_IOS
         self.annotationLabel.text = mapItem.name;
 #endif
 #ifdef IS_OSX
-        self.annotationLabel.stringValue = mapItem.name;
+        [self.annotationLabel setStringValue:mapItem.name];
 #endif
-        [self.annotationLabel sizeToFit];   // get the right vertical size
+        [_annotationLabel sizeToFit];   // get the right vertical size
 
 
             // compute the optimum width of our annotation, based on the size of our annotation label
@@ -68,7 +71,7 @@ static CGFloat kRoundBoxLeft = 10.0;
         self.frame = frame;
 
             //self.annotationLabel.lineBreakMode = NSLineBreakByTruncatingTail;
-        self.annotationLabel.backgroundColor = [COLOR clearColor];
+        _annotationLabel.backgroundColor = [COLOR clearColor];
         CGRect newFrame = self.annotationLabel.frame;
         newFrame.origin.x = kLeftMargin;
         newFrame.origin.y = kTopMargin;
@@ -80,7 +83,7 @@ static CGFloat kRoundBoxLeft = 10.0;
             // the annotation image snaps to the width and height of this view
 #ifdef IS_IOS
         _annotationImage = [[IMAGEVIEW alloc] initWithImage:[IMAGE imageNamed:mapItem.image]];
-        self.annotationImage.contentMode = UIViewContentModeScaleAspectFit;
+        _annotationImage.contentMode = UIViewContentModeScaleAspectFit;
 #endif
 #ifdef IS_OSX
         _annotationImage = [[IMAGEVIEW alloc] init];
@@ -89,12 +92,12 @@ static CGFloat kRoundBoxLeft = 10.0;
 #endif
 
 
-        self.annotationImage.frame =
+        _annotationImage.frame =
         CGRectMake(kLeftMargin,
                    self.annotationLabel.frame.origin.y + self.annotationLabel.frame.size.height + kTopMargin,
                    self.frame.size.width - kRightMargin - kLeftMargin,
                    self.frame.size.height - self.annotationLabel.frame.size.height - kTopMargin*2 - kBottomMargin);
-        [self addSubview:self.annotationImage];
+        [self addSubview:_annotationImage];
         }
 
     return self;

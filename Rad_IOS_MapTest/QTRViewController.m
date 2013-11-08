@@ -221,18 +221,9 @@ bool mappingDoha = NO;
         //rect = [self.QTRView visibleMapRect];
         //NSLog(@"mapview rectangle after = %f, %f, %f, %f", rect.origin.x, rect.origin.y, rect.size.height, rect.size.width);
 
+
 }
 
-- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
-{
-    MKMapRect rect = [self.QTRView visibleMapRect];
-    NSLog(@"mapview rectangle did change = %f, %f, %f, %f", rect.origin.x, rect.origin.y, rect.size.height, rect.size.width);
-    rect.size.width +=8000;
-    rect.size.height +=8000;
-    if (mappingDoha) {
-        [self.QTRView  setVisibleMapRect:rect animated:YES]; }
-    mappingDoha = NO;
-}
 
 
 
@@ -247,6 +238,7 @@ bool mappingDoha = NO;
 }
 
 #pragma mark - delegate methods
+
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
     if ([annotation isKindOfClass:[MKUserLocation class]])
@@ -269,7 +261,26 @@ bool mappingDoha = NO;
     return nil;
 }
 
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
+{
+        //MKMapRect rect = [self.QTRView visibleMapRect];
+        //NSLog(@"mapview rectangle did change = %f, %f, %f, %f", rect.origin.x, rect.origin.y, rect.size.height, rect.size.width);
+        //rect.size.width +=8000;
+        //rect.size.height +=8000;
+    if (mappingDoha) {
+            //        [self.QTRView  setVisibleMapRect:rect animated:YES]; }
+        mappingDoha = NO;
+        self.QTRView.camera.altitude *= 1.3;
+    }
 
+}
+
+-(void)mapView:(MKMapView *)mapView regionWillChangeAnimated:(BOOL)animated
+{
+//    MKMapRect rect = [self.QTRView visibleMapRect];
+//    NSLog(@"mapview rectangle will change = %f, %f, %f, %f", rect.origin.x, rect.origin.y, rect.size.height, rect.size.width);
+
+}
 
 
 -(MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay{
@@ -279,12 +290,18 @@ bool mappingDoha = NO;
         overlayView.alpha = 0.5;
         return overlayView;
     }
+        //IMAGE *pattern = [IMAGE imageNamed:@"QFLag"];
+        //COLOR *clr = [COLOR colorWithPatternImage:pattern];
 
-    COLOR *fillColor = [COLOR colorWithHue:.5 saturation:.5 brightness:.5 alpha:.5];
-    COLOR *strokeColor = [COLOR colorWithRed:0 green:0 blue:0 alpha:0.5f];
+        //COLOR *fillColor = [COLOR colorWithHue:.5 saturation:.5 brightness:.5 alpha:.5];
+        //COLOR *fillColor = [[COLOR alloc] initWithPatternImage:[IMAGE imageNamed:@"candy-stripe1.jpg"]];;
+    COLOR *strokeColor = [COLOR clearColor];
+        //COLOR *strokeColor = [COLOR colorWithRed:0 green:0 blue:0 alpha:0.5f];
+
     self.polyRender = [[MKPolygonRenderer alloc] initWithOverlay:overlay];
     self.polyRender.strokeColor =strokeColor;
-    self.polyRender.fillColor =fillColor;
+    [self.polyRender setFillColor:[COLOR  colorWithPatternImage:[IMAGE imageNamed:@"paper_stripes.jpg"]]];
+    self.polyRender.alpha = 0.6;
     return self.polyRender;
 }
 
