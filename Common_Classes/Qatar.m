@@ -11,6 +11,8 @@
 
 @implementation Qatar
 
+    //class to hold overlay data
+
 
 - (instancetype)initWithRegion{
 
@@ -27,17 +29,6 @@
             _overlayBottomLeftCoordinate = CLLocationCoordinate2DMake(24.352, 50.60);
 
 
-            /*
-            NSArray *boundaryPoints = properties[@"boundary"];
-
-            _boundaryPointsCount = boundaryPoints.count;
-
-            _boundary = malloc(sizeof(CLLocationCoordinate2D)*_boundaryPointsCount);
-
-            for(int i = 0; i < _boundaryPointsCount; i++) {
-                CGPoint p = CGPointFromString(boundaryPoints[i]);
-                _boundary[i] = CLLocationCoordinate2DMake(p.x,p.y);
-            } */
         }
         
         return self;

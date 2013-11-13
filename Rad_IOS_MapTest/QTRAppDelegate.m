@@ -25,7 +25,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
         // Insert code here to initialize your application
-        //NSLog(@"target is %@",[[[NSProcessInfo processInfo] environment] objectForKey:@"TARGET"]);
+        //this is the OSX intializer method
 
     [self.window setFrame:NSRectFromCGRect(CGRectMake(300, 300, 1000, 1000)) display:YES];
     NSRect windoh = self.window.frame;
@@ -45,8 +45,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+        // this is the iOS intializer
 
-    NSLog(@"target is %@",[[[NSProcessInfo processInfo] environment] objectForKey:@"TARGET"]);
+        //NSLog(@"target is %@",[[[NSProcessInfo processInfo] environment] objectForKey:@"TARGET"]);
         // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.QTRMapController = [[QTRViewController alloc] init];

@@ -32,6 +32,8 @@ static CGFloat kRoundBoxLeft = 10.0;
 
 @implementation QTRParkAnnotationView
 
+    // a lot of cut and paste from an apple sample - removed reuse as eash annotation is different graphically
+
     // determine the MKAnnotationView based on the annotation info and reuseIdentifier
     //
 - (id)initWithAnnotation:(id <MKAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier
@@ -50,11 +52,17 @@ static CGFloat kRoundBoxLeft = 10.0;
         QTRParkMapItem *mapItem = (QTRParkMapItem*)self.annotation;
         _annotationLabel.font = [FONT systemFontOfSize:9.0];
         _annotationLabel.textColor = [COLOR whiteColor];
+        _annotationLabel.backgroundColor = [COLOR clearColor];
+
 #ifdef IS_IOS
         self.annotationLabel.text = mapItem.name;
+
 #endif
 #ifdef IS_OSX
         [self.annotationLabel setStringValue:mapItem.name];
+        [_annotationLabel setEditable:NO];
+        [_annotationLabel setBezeled:NO];
+            //[self.annotationLabel setTitle:mapItem.name];
 #endif
         [_annotationLabel sizeToFit];   // get the right vertical size
 
@@ -71,7 +79,7 @@ static CGFloat kRoundBoxLeft = 10.0;
         self.frame = frame;
 
             //self.annotationLabel.lineBreakMode = NSLineBreakByTruncatingTail;
-        _annotationLabel.backgroundColor = [COLOR clearColor];
+            //_annotationLabel.backgroundColor = [COLOR clearColor];
         CGRect newFrame = self.annotationLabel.frame;
         newFrame.origin.x = kLeftMargin;
         newFrame.origin.y = kTopMargin;
@@ -87,8 +95,10 @@ static CGFloat kRoundBoxLeft = 10.0;
 #endif
 #ifdef IS_OSX
         _annotationImage = [[IMAGEVIEW alloc] init];
-            //NSImage *img = [[NSImage alloc] initWithContentsOfFile:mapItem.image];
-        [_annotationImage setImage:[[NSImage alloc] initWithContentsOfFile:mapItem.image]];
+        NSBundle *mainbundle = [NSBundle mainBundle];
+        NSString *path = [mainbundle pathForResource:mapItem.image ofType:nil];
+        NSImage *img = [[NSImage alloc] initWithContentsOfFile:path];
+        [_annotationImage setImage:img];
 #endif
 
 

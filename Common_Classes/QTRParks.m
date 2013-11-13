@@ -13,6 +13,9 @@
 @implementation QTRParks
 
 
+    // class to hold parks in Doha data
+
+
 -(NSArray *) arrayOfParks {
     NSMutableArray *parks = [NSMutableArray new];
 

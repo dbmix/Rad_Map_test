@@ -14,6 +14,8 @@
 @synthesize coordinate;
 @synthesize boundingMapRect;
 
+    //the object to initialize the overlay
+
 - (instancetype)initWithRegion:(Qatar *)qatar {
     self = [super init];
     if (self) {

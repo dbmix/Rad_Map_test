@@ -14,7 +14,7 @@
     CLLocationCoordinate2D coordinate;
 }
 
-
+    // basically sets the properties of the map item
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *image;
 

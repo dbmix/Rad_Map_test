@@ -11,6 +11,8 @@
 
 @implementation QTRStartingRegion
 
+    // class to arbitrarily designate a zoom window - in this case what the initial view is
+
 +(MKCoordinateRegion)startingRegion {
 
 MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(

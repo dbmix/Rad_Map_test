@@ -34,6 +34,13 @@
 
 @implementation QTRViewController
 
+
+
+    // Main action for the app
+
+
+
+
 bool polyOverlay = NO;
 bool graphicOverlay = NO;
 bool mappingDoha = NO;
@@ -57,7 +64,7 @@ bool mappingDoha = NO;
         [self.QTRFlag setTitle:@"Flag"];
         [self.QTRFlag setAction:@selector(addFlagOverlay)];
 
-        [self.Doha setTitle:@"Doha"];
+        [self.Doha setTitle:@"Doha Parks"];
         [self.Doha setAction:@selector(mapDoha)];
         [self addButtonsAndConstraints];
 
@@ -70,6 +77,10 @@ bool mappingDoha = NO;
 #endif  // end of OS X initiator
 
 #ifdef IS_IOS
+
+    //iPhone view life cycle
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -98,7 +109,7 @@ bool mappingDoha = NO;
     [self.QTRFlag addTarget:self action:@selector(addFlagOverlay) forControlEvents:UIControlEventTouchDown];
 
     self.Doha.backgroundColor = [UIColor whiteColor];
-    [self.Doha setTitle:@"Doha" forState:UIControlStateNormal];
+    [self.Doha setTitle:@"Doha Parks" forState:UIControlStateNormal];
     [self.Doha setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     [self.Doha addTarget:self action:@selector(mapDoha) forControlEvents:UIControlEventTouchDown];
 
@@ -156,6 +167,7 @@ bool mappingDoha = NO;
 }
 
 #pragma mark - map actions
+
 -(void) zoomToQatarWithAnnotations {
 
     if (polyOverlay) {
@@ -180,7 +192,7 @@ bool mappingDoha = NO;
     }
 
     self.demoPolygon = [MKPolygon polygonWithCoordinates:ovrlayCoord count:nmbr];
-    [self.QTRView addOverlay:self.demoPolygon level:MKOverlayLevelAboveRoads];
+    [self.QTRView addOverlay:self.demoPolygon level:MKOverlayLevelAboveRoads]; // play with the insertion level
     polyOverlay = YES;
 
     [self.QTRView showAnnotations:outLineCoordinates animated:YES];
@@ -202,7 +214,7 @@ bool mappingDoha = NO;
         return;
     }
     self.flagOverlay = [[QTRQatarMapOverlay alloc] initWithRegion:self.qatar];
-    [self.QTRView addOverlay:self.flagOverlay level:MKOverlayLevelAboveRoads];
+    [self.QTRView addOverlay:self.flagOverlay level:MKOverlayLevelAboveRoads]; // can also insert above Labels
     graphicOverlay = YES;
 }
 
@@ -245,16 +257,11 @@ bool mappingDoha = NO;
         {
         return nil;  // this should never trigger
         }
-    if ([annotation isKindOfClass:[QTRParkMapItem class]])  // for Japanese Tea Garden
+    if ([annotation isKindOfClass:[QTRParkMapItem class]])
         {
-            //static NSString *TeaGardenAnnotationIdentifier = @"TeaGardenAnnotationIdentifier";
 
         QTRParkAnnotationView *annotationView = [[QTRParkAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:Nil];
-            //(QTRParkAnnotationView *)[self.QTRView dequeueReusableAnnotationViewWithIdentifier:TeaGardenAnnotationIdentifier];
-            //if (annotationView == nil)
-            //{
-            //annotationView = [[QTRParkAnnotationView alloc] initWithAnnotation:annotation]; //reuseIdentifier:TeaGardenAnnotationIdentifier];
-            // }
+
         return annotationView;
         }
 
@@ -300,7 +307,11 @@ bool mappingDoha = NO;
 
     self.polyRender = [[MKPolygonRenderer alloc] initWithOverlay:overlay];
     self.polyRender.strokeColor =strokeColor;
-    [self.polyRender setFillColor:[COLOR  colorWithPatternImage:[IMAGE imageNamed:@"paper_stripes.jpg"]]];
+
+        //IMAGE *colorImage = [IMAGE imageNamed:@"paper_stripes.jpg"];
+    COLOR *color = [[COLOR alloc] initWithPatternImage:[IMAGE imageNamed:@"paper_stripes.jpg"]];
+        //[color set];
+    self.polyRender.fillColor = color;
     self.polyRender.alpha = 0.6;
     return self.polyRender;
 }

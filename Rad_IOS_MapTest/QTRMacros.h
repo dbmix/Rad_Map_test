@@ -38,6 +38,7 @@
 #define COLOR NSColor
 #define IMAGEVIEW NSImageView
 #define LABEL NSTextField
+    //#define LABEL NSButton
 #define BACKGROUND self.window.backgroundColor
 #define FONT NSFont
 #define BEZIERPATH NSBezierPath
