@@ -44,6 +44,10 @@
 		1656CE8F182AEDC100B9D18C /* QTRParks.m in Sources */ = {isa = PBXBuildFile; fileRef = 1656CE8D182AEDC100B9D18C /* QTRParks.m */; };
 		1656CE92182AF28400B9D18C /* QTRParkAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1656CE91182AF28300B9D18C /* QTRParkAnnotationView.m */; };
 		1656CE93182AF28400B9D18C /* QTRParkAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1656CE91182AF28300B9D18C /* QTRParkAnnotationView.m */; };
+		165A445C1835643E003E5BAD /* QTRStripesOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 165A445B1835643E003E5BAD /* QTRStripesOverlayView.m */; };
+		165A445D1835643E003E5BAD /* QTRStripesOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 165A445B1835643E003E5BAD /* QTRStripesOverlayView.m */; };
+		165A44601835668D003E5BAD /* QTRStripesMapOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 165A445F1835668D003E5BAD /* QTRStripesMapOverlay.m */; };
+		165A44611835668D003E5BAD /* QTRStripesMapOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 165A445F1835668D003E5BAD /* QTRStripesMapOverlay.m */; };
 		169B45F01821AB9F00B61B59 /* Qatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 169B45EF1821AB9F00B61B59 /* Qatar.m */; };
 		16A283DE18284C91008B41E0 /* Qatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 169B45EF1821AB9F00B61B59 /* Qatar.m */; };
 		16A283DF18284C9B008B41E0 /* QTRStartingRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 161C2D6C18241E3000AA63F7 /* QTRStartingRegion.m */; };
@@ -121,6 +125,10 @@
 		1656CE8D182AEDC100B9D18C /* QTRParks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QTRParks.m; path = Common_Classes/QTRParks.m; sourceTree = "<group>"; };
 		1656CE90182AF28300B9D18C /* QTRParkAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QTRParkAnnotationView.h; path = Common_Classes/QTRParkAnnotationView.h; sourceTree = "<group>"; };
 		1656CE91182AF28300B9D18C /* QTRParkAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QTRParkAnnotationView.m; path = Common_Classes/QTRParkAnnotationView.m; sourceTree = "<group>"; };
+		165A445A1835643E003E5BAD /* QTRStripesOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QTRStripesOverlayView.h; path = Common_Classes/QTRStripesOverlayView.h; sourceTree = "<group>"; };
+		165A445B1835643E003E5BAD /* QTRStripesOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QTRStripesOverlayView.m; path = Common_Classes/QTRStripesOverlayView.m; sourceTree = "<group>"; };
+		165A445E1835668D003E5BAD /* QTRStripesMapOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QTRStripesMapOverlay.h; path = Common_Classes/QTRStripesMapOverlay.h; sourceTree = "<group>"; };
+		165A445F1835668D003E5BAD /* QTRStripesMapOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QTRStripesMapOverlay.m; path = Common_Classes/QTRStripesMapOverlay.m; sourceTree = "<group>"; };
 		169B45EE1821AB9F00B61B59 /* Qatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Qatar.h; path = Common_Classes/Qatar.h; sourceTree = "<group>"; };
 		169B45EF1821AB9F00B61B59 /* Qatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Qatar.m; path = Common_Classes/Qatar.m; sourceTree = "<group>"; };
 		16D6C56918206A020051DCD3 /* Rad_IOS_MapTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rad_IOS_MapTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -298,6 +306,10 @@
 				16E037BF1821BAB30061E9D1 /* QTRQatarMapOverlayView.m */,
 				16E037BB1821B96E0061E9D1 /* QTRQatarMapOverlay.h */,
 				16E037BC1821B96E0061E9D1 /* QTRQatarMapOverlay.m */,
+				165A445E1835668D003E5BAD /* QTRStripesMapOverlay.h */,
+				165A445F1835668D003E5BAD /* QTRStripesMapOverlay.m */,
+				165A445A1835643E003E5BAD /* QTRStripesOverlayView.h */,
+				165A445B1835643E003E5BAD /* QTRStripesOverlayView.m */,
 			);
 			name = Common_Classes;
 			sourceTree = "<group>";
@@ -563,11 +575,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				165A445D1835643E003E5BAD /* QTRStripesOverlayView.m in Sources */,
 				1656CE74182AA8AD00B9D18C /* QTRQatarMapOverlayView.m in Sources */,
 				16A283DF18284C9B008B41E0 /* QTRStartingRegion.m in Sources */,
 				16308EE7182A94680042A8C3 /* QTRAppDelegate.m in Sources */,
 				1656CE8B182AB92700B9D18C /* QTRViewController.m in Sources */,
 				16A283DE18284C91008B41E0 /* Qatar.m in Sources */,
+				165A44611835668D003E5BAD /* QTRStripesMapOverlay.m in Sources */,
 				1656CE8F182AEDC100B9D18C /* QTRParks.m in Sources */,
 				16A283E018284DF0008B41E0 /* QTRQatarMapOverlay.m in Sources */,
 				1656CE93182AF28400B9D18C /* QTRParkAnnotationView.m in Sources */,
@@ -588,11 +602,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				165A445C1835643E003E5BAD /* QTRStripesOverlayView.m in Sources */,
 				16E037BD1821B96E0061E9D1 /* QTRQatarMapOverlay.m in Sources */,
 				16D6C57D18206A020051DCD3 /* QTRAppDelegate.m in Sources */,
 				169B45F01821AB9F00B61B59 /* Qatar.m in Sources */,
 				161C2D6D18241E3000AA63F7 /* QTRStartingRegion.m in Sources */,
 				16D6C58318206A020051DCD3 /* QTRViewController.m in Sources */,
+				165A44601835668D003E5BAD /* QTRStripesMapOverlay.m in Sources */,
 				1656CE8E182AEDC100B9D18C /* QTRParks.m in Sources */,
 				16E037C01821BAB30061E9D1 /* QTRQatarMapOverlayView.m in Sources */,
 				1656CE92182AF28400B9D18C /* QTRParkAnnotationView.m in Sources */,

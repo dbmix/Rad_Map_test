@@ -17,6 +17,8 @@
 #import "QTRParks.h"
 #import "QTRParkMapItem.h"
 #import "QTRParkAnnotationView.h"
+#import "QTRStripesMapOverlay.h"
+#import "QTRStripesOverlayView.h"
 
 @interface QTRViewController () <MKMapViewDelegate>
 
@@ -26,7 +28,7 @@
 @property (strong, nonatomic) MKPolygonRenderer *polyRender;
 @property (strong, nonatomic) Qatar *qatar;
 @property (strong, nonatomic) BUTTON *QTRFlag;
-@property (strong, nonatomic) QTRQatarMapOverlay *flagOverlay;
+@property (strong, nonatomic) QTRStripesMapOverlay *flagOverlay;  //change this to QTRQatarMapOverlay for flag image
 @property (strong, nonatomic) BUTTON *Doha;
 @property (strong, nonatomic) NSDictionary *viewsDictionary;
 
@@ -118,6 +120,8 @@ bool mappingDoha = NO;
     [self.view addSubview:self.Doha];
 
     [self addButtonsAndConstraints];
+
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -192,6 +196,45 @@ bool mappingDoha = NO;
     }
 
     self.demoPolygon = [MKPolygon polygonWithCoordinates:ovrlayCoord count:nmbr];
+
+    /*
+        // testing testing
+        // start with our position and derive a nice unit for drawing
+
+    CLLocationCoordinate2D loc = CLLocationCoordinate2DMake(25.304, 51.26);
+    CGFloat lat = loc.latitude;
+    CLLocationDistance metersPerPoint = MKMetersPerMapPointAtLatitude(lat);
+    MKMapPoint c = MKMapPointForCoordinate(loc);
+    CGFloat unit = 11000.0/metersPerPoint;
+        // size and position the overlay bounds on the earth
+    CGSize sz = CGSizeMake(4*unit, 4*unit);
+    MKMapRect mr = MKMapRectMake(c.x + 2*unit, c.y - 4.5*unit, sz.width, sz.height);
+        // describe the arrow as a CGPath
+    CGMutablePathRef p = CGPathCreateMutable();
+    CGPoint start = CGPointMake(0, unit*1.5);
+    CGPoint p1 = CGPointMake(start.x+2*unit, start.y);
+    CGPoint p2 = CGPointMake(p1.x, p1.y-unit);
+    CGPoint p3 = CGPointMake(p2.x+unit*2, p2.y+unit*1.5);
+    CGPoint p4 = CGPointMake(p2.x, p2.y+unit*3);
+    CGPoint p5 = CGPointMake(p4.x, p4.y-unit);
+    CGPoint p6 = CGPointMake(p5.x-2*unit, p5.y);
+    CGPoint points[] = {
+        start, p1, p2, p3, p4, p5, p6
+    };
+        // rotate the arrow around its center
+    CGAffineTransform t1 = CGAffineTransformMakeTranslation(unit*2, unit*2);
+    CGAffineTransform t2 = CGAffineTransformRotate(t1, -M_PI/3.5);
+    CGAffineTransform t3 = CGAffineTransformTranslate(t2, -unit*2, -unit*2);
+    CGPathAddLines(p, &t3, points, 7);
+    CGPathCloseSubpath(p);
+
+        // create the overlay and give it the path
+        //MyOverlay* over = [[MyOverlay alloc] initWithRect:mr];
+    self.qatar.path = [UIBezierPath bezierPathWithCGPath:p];
+    CGPathRelease(p);
+
+        // end of testing testing */
+
     [self.QTRView addOverlay:self.demoPolygon level:MKOverlayLevelAboveRoads]; // play with the insertion level
     polyOverlay = YES;
 
@@ -213,15 +256,13 @@ bool mappingDoha = NO;
         graphicOverlay = NO;
         return;
     }
-    self.flagOverlay = [[QTRQatarMapOverlay alloc] initWithRegion:self.qatar];
+        //self.flagOverlay = [[QTRQatarMapOverlay alloc] initWithRegion:self.qatar]; //use this for flag version
+    self.flagOverlay = [[QTRStripesMapOverlay alloc] initWithRegion:self.qatar];   // turn this off for flag version
     [self.QTRView addOverlay:self.flagOverlay level:MKOverlayLevelAboveRoads]; // can also insert above Labels
     graphicOverlay = YES;
 }
 
 - (void) mapDoha {
-        //NSLog(@" mapping Doha now");
-        // MKMapRect rect = [self.QTRView visibleMapRect];
-        //NSLog(@"mapview rectangle before = %f, %f, %f, %f", rect.origin.x, rect.origin.y, rect.size.height, rect.size.width);
     mappingDoha = YES;
     [self.QTRView removeOverlays:self.QTRView.overlays];
     QTRParks *parks = [[QTRParks alloc] init];
@@ -230,9 +271,6 @@ bool mappingDoha = NO;
         [self.QTRView addAnnotation:itm];
     }
     [self.QTRView showAnnotations:self.QTRView.annotations animated:YES];
-        //rect = [self.QTRView visibleMapRect];
-        //NSLog(@"mapview rectangle after = %f, %f, %f, %f", rect.origin.x, rect.origin.y, rect.size.height, rect.size.width);
-
 
 }
 
@@ -296,25 +334,57 @@ bool mappingDoha = NO;
         QTRQatarMapOverlayView *overlayView = [[QTRQatarMapOverlayView alloc] initWithOverlay:overlay overlayImage:QFlag];
         overlayView.alpha = 0.5;
         return overlayView;
+    } else if ([overlay isKindOfClass:QTRStripesMapOverlay.class]) {   ////change this to QTRQatarMapOverlay for flag image
+        QTRStripesOverlayView *overlayView = [[QTRStripesOverlayView alloc] initWithOverlay:overlay];
+        return overlayView;
     }
-        //IMAGE *pattern = [IMAGE imageNamed:@"QFLag"];
-        //COLOR *clr = [COLOR colorWithPatternImage:pattern];
-
-        //COLOR *fillColor = [COLOR colorWithHue:.5 saturation:.5 brightness:.5 alpha:.5];
-        //COLOR *fillColor = [[COLOR alloc] initWithPatternImage:[IMAGE imageNamed:@"candy-stripe1.jpg"]];;
     COLOR *strokeColor = [COLOR clearColor];
-        //COLOR *strokeColor = [COLOR colorWithRed:0 green:0 blue:0 alpha:0.5f];
 
     self.polyRender = [[MKPolygonRenderer alloc] initWithOverlay:overlay];
-    self.polyRender.strokeColor =strokeColor;
+    self.polyRender.strokeColor = strokeColor;
 
-        //IMAGE *colorImage = [IMAGE imageNamed:@"paper_stripes.jpg"];
     COLOR *color = [[COLOR alloc] initWithPatternImage:[IMAGE imageNamed:@"paper_stripes.jpg"]];
         //[color set];
     self.polyRender.fillColor = color;
     self.polyRender.alpha = 0.6;
     return self.polyRender;
+
+   /* MKOverlayPathRenderer *v = nil;
+    v = [[MKOverlayPathRenderer alloc] initWithOverlay:overlay];
+    MKOverlayPathRenderer* vv = (MKOverlayPathRenderer*)v;
+
+    CGContextRef con = UIGraphicsGetCurrentContext();
+        //CGContextSaveGState(con);
+    UIGraphicsPushContext(con);
+
+    CGColorSpaceRef sp2 = CGColorSpaceCreatePattern(nil);
+    CGContextSetFillColorSpace (con, sp2);
+    CGColorSpaceRelease (sp2);
+    CGPatternCallbacks callback = {0, drawStripes, nil};
+    CGAffineTransform tr = CGAffineTransformIdentity;
+    CGPatternRef patt = CGPatternCreate(nil,
+                                        CGRectMake(0,0,4,4),
+                                        tr,
+                                        4, 4,
+                                        kCGPatternTilingConstantSpacingMinimalDistortion,
+                                        true,
+                                        &callback);
+    CGFloat alph = 1.0;
+    CGContextSetFillPattern(con, patt, &alph);
+    CGPatternRelease(patt);
+    
+    
+
+    vv.path = self.qatar.path.CGPath;
+    vv.strokeColor = [UIColor blackColor];
+        //vv.fillColor = color; //[[UIColor redColor] colorWithAlphaComponent:0.2];
+    vv.lineWidth = 2;
+        //[vv applyFillPropertiesToContext:graphics_context atZoomScale:1.0];
+    return vv; */
+
 }
+
+
 
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
 {

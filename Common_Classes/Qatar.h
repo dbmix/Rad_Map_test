@@ -25,6 +25,10 @@
 
 @property (nonatomic, strong) NSString *name;
 
+@property (nonatomic, strong) UIBezierPath *path;
+
+
+
 - (instancetype)initWithRegion;
 - (NSArray *) qatarOutlineCoordinates;
 @end

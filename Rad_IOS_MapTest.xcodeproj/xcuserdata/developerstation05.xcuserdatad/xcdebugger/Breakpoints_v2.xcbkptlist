@@ -19,22 +19,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Rad_IOS_MapTest/QTRViewController.m"
-            timestampString = "406049214.845078"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "218"
-            endingLineNumber = "218"
-            landmarkName = "-addFlagOverlay"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Rad_IOS_MapTest/QTRQatarMapOverlayView.m"
             timestampString = "405448151.986628"
             startingColumnNumber = "9223372036854775807"
@@ -84,11 +68,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rad_IOS_MapTest/QTRViewController.m"
-            timestampString = "406049214.845078"
+            timestampString = "406153415.196874"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "230"
-            endingLineNumber = "230"
+            startingLineNumber = "271"
+            endingLineNumber = "271"
             landmarkName = "-mapDoha"
             landmarkType = "5">
          </BreakpointContent>
@@ -148,11 +132,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rad_IOS_MapTest/QTRViewController.m"
-            timestampString = "406049214.845078"
+            timestampString = "406153415.196874"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "224"
-            endingLineNumber = "224"
+            startingLineNumber = "268"
+            endingLineNumber = "268"
             landmarkName = "-mapDoha"
             landmarkType = "5">
          </BreakpointContent>
@@ -164,43 +148,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rad_IOS_MapTest/QTRViewController.m"
-            timestampString = "406052024.894998"
+            timestampString = "406153415.196874"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "300"
-            endingLineNumber = "300"
-            landmarkName = "-mapView:rendererForOverlay:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Rad_IOS_MapTest/QTRViewController.m"
-            timestampString = "406049214.845078"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "227"
-            endingLineNumber = "227"
-            landmarkName = "-mapDoha"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Rad_IOS_MapTest/QTRViewController.m"
-            timestampString = "406049214.845078"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "229"
-            endingLineNumber = "229"
+            startingLineNumber = "270"
+            endingLineNumber = "270"
             landmarkName = "-mapDoha"
             landmarkType = "5">
             <Locations>
@@ -242,29 +194,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rad_IOS_MapTest/QTRViewController.m"
-            timestampString = "406057076.428617"
+            timestampString = "406153415.196874"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "308"
-            endingLineNumber = "308"
-            landmarkName = "-mapView:rendererForOverlay:"
+            startingLineNumber = "211"
+            endingLineNumber = "211"
+            landmarkName = "-zoomToQatarWithAnnotations"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Rad_IOS_MapTest/QTRViewController.m"
-            timestampString = "406064335.702483"
+            filePath = "Rad_IOS_MapTest/QTRQatarMapOverlayView.m"
+            timestampString = "406152091.730904"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "315"
-            endingLineNumber = "315"
-            landmarkName = "-mapView:rendererForOverlay:"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "-initWithOverlay:overlayImage:"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Common_Classes/QTRStripesOverlayView.m"
+            timestampString = "406161602.860385"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "drawStripes()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
