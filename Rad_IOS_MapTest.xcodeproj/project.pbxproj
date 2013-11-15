@@ -22,6 +22,12 @@
 		16063DC6182D394D001811DD /* paper_stripes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16063DC5182D394D001811DD /* paper_stripes.jpg */; };
 		16063DC7182D394D001811DD /* paper_stripes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16063DC5182D394D001811DD /* paper_stripes.jpg */; };
 		160F56C61827F61F00B31F1D /* QFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 160F56C51827F61F00B31F1D /* QFlag.png */; };
+		16130EA318367A7B00175310 /* candy-stripe2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16130EA218367A7B00175310 /* candy-stripe2.jpg */; };
+		16130EA518367BA300175310 /* candy-stripe2.png in Resources */ = {isa = PBXBuildFile; fileRef = 16130EA418367BA300175310 /* candy-stripe2.png */; };
+		16130EA618367BA300175310 /* candy-stripe2.png in Resources */ = {isa = PBXBuildFile; fileRef = 16130EA418367BA300175310 /* candy-stripe2.png */; };
+		16130EA718367BB500175310 /* candy-stripe2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16130EA218367A7B00175310 /* candy-stripe2.jpg */; };
+		16130EA91836850700175310 /* candy-stripe3.png in Resources */ = {isa = PBXBuildFile; fileRef = 16130EA81836850700175310 /* candy-stripe3.png */; };
+		16130EAA1836850700175310 /* candy-stripe3.png in Resources */ = {isa = PBXBuildFile; fileRef = 16130EA81836850700175310 /* candy-stripe3.png */; };
 		161B8F4E182BEAB30069A50A /* QTRParkMapItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 161B8F4D182BEAB30069A50A /* QTRParkMapItem.m */; };
 		161B8F4F182BEAB30069A50A /* QTRParkMapItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 161B8F4D182BEAB30069A50A /* QTRParkMapItem.m */; };
 		161B8F57182BFA600069A50A /* Al_Bidda_Park.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 161B8F51182BFA600069A50A /* Al_Bidda_Park.jpg */; };
@@ -110,6 +116,9 @@
 		160F56D018280F7500B31F1D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		160F56D118280F7500B31F1D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		160F575F1828408000B31F1D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		16130EA218367A7B00175310 /* candy-stripe2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "candy-stripe2.jpg"; sourceTree = "<group>"; };
+		16130EA418367BA300175310 /* candy-stripe2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "candy-stripe2.png"; sourceTree = "<group>"; };
+		16130EA81836850700175310 /* candy-stripe3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "candy-stripe3.png"; sourceTree = "<group>"; };
 		161B8F4C182BEAB30069A50A /* QTRParkMapItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTRParkMapItem.h; sourceTree = "<group>"; };
 		161B8F4D182BEAB30069A50A /* QTRParkMapItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTRParkMapItem.m; sourceTree = "<group>"; };
 		161B8F51182BFA600069A50A /* Al_Bidda_Park.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Al_Bidda_Park.jpg; sourceTree = "<group>"; };
@@ -142,8 +151,8 @@
 		16D6C57B18206A020051DCD3 /* QTRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTRAppDelegate.h; sourceTree = "<group>"; };
 		16D6C57C18206A020051DCD3 /* QTRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTRAppDelegate.m; sourceTree = "<group>"; };
 		16D6C57F18206A020051DCD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		16D6C58118206A020051DCD3 /* QTRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTRViewController.h; sourceTree = "<group>"; };
-		16D6C58218206A020051DCD3 /* QTRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTRViewController.m; sourceTree = "<group>"; };
+		16D6C58118206A020051DCD3 /* QTRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QTRViewController.h; path = Rad_IOS_MapTest/QTRViewController.h; sourceTree = "<group>"; };
+		16D6C58218206A020051DCD3 /* QTRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = QTRViewController.m; path = Rad_IOS_MapTest/QTRViewController.m; sourceTree = "<group>"; };
 		16D6C58418206A020051DCD3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		16D6C58A18206A020051DCD3 /* Rad_IOS_MapTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Rad_IOS_MapTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16D6C58B18206A020051DCD3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -252,6 +261,9 @@
 		16063DC1182D366D001811DD /* Graphic_Resources */ = {
 			isa = PBXGroup;
 			children = (
+				16130EA81836850700175310 /* candy-stripe3.png */,
+				16130EA418367BA300175310 /* candy-stripe2.png */,
+				16130EA218367A7B00175310 /* candy-stripe2.jpg */,
 				16063DC5182D394D001811DD /* paper_stripes.jpg */,
 				16063DC2182D3689001811DD /* candy-stripe1.jpg */,
 				160F56C51827F61F00B31F1D /* QFlag.png */,
@@ -282,7 +294,7 @@
 			path = "Park Resources";
 			sourceTree = "<group>";
 		};
-		161C2D6A18241E1A00AA63F7 /* Regions */ = {
+		161C2D6A18241E1A00AA63F7 /* Regions - Data Models */ = {
 			isa = PBXGroup;
 			children = (
 				161C2D6B18241E3000AA63F7 /* QTRStartingRegion.h */,
@@ -292,12 +304,14 @@
 				1656CE8C182AEDC100B9D18C /* QTRParks.h */,
 				1656CE8D182AEDC100B9D18C /* QTRParks.m */,
 			);
-			name = Regions;
+			name = "Regions - Data Models";
 			sourceTree = "<group>";
 		};
 		16A283E2182850DD008B41E0 /* Common_Classes */ = {
 			isa = PBXGroup;
 			children = (
+				16D6C58118206A020051DCD3 /* QTRViewController.h */,
+				16D6C58218206A020051DCD3 /* QTRViewController.m */,
 				161B8F4C182BEAB30069A50A /* QTRParkMapItem.h */,
 				161B8F4D182BEAB30069A50A /* QTRParkMapItem.m */,
 				1656CE90182AF28300B9D18C /* QTRParkAnnotationView.h */,
@@ -320,7 +334,7 @@
 				16063DC1182D366D001811DD /* Graphic_Resources */,
 				161B8F50182BFA600069A50A /* Park Resources */,
 				16A283E2182850DD008B41E0 /* Common_Classes */,
-				161C2D6A18241E1A00AA63F7 /* Regions */,
+				161C2D6A18241E1A00AA63F7 /* Regions - Data Models */,
 				16D6C57218206A020051DCD3 /* Rad_IOS_MapTest */,
 				16D6C59118206A020051DCD3 /* Rad_IOS_MapTestTests */,
 				16002B17182843D400452358 /* Rad_OSX_Map_Test */,
@@ -362,8 +376,6 @@
 				16D6C57B18206A020051DCD3 /* QTRAppDelegate.h */,
 				16D6C57C18206A020051DCD3 /* QTRAppDelegate.m */,
 				16D6C57E18206A020051DCD3 /* Main.storyboard */,
-				16D6C58118206A020051DCD3 /* QTRViewController.h */,
-				16D6C58218206A020051DCD3 /* QTRViewController.m */,
 				1656CE76182AAFA600B9D18C /* QTRMacros.h */,
 				16D6C58418206A020051DCD3 /* Images.xcassets */,
 				16D6C57318206A020051DCD3 /* Supporting Files */,
@@ -518,13 +530,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				161B8F5A182BFA600069A50A /* Al_Ghanim_Al_Qadeem.jpg in Resources */,
+				16130EA718367BB500175310 /* candy-stripe2.jpg in Resources */,
 				16002B1C182843D400452358 /* InfoPlist.strings in Resources */,
 				16002B2A182843D400452358 /* Images.xcassets in Resources */,
 				161B8F60182BFA600069A50A /* Aspire.jpg in Resources */,
 				16063DC7182D394D001811DD /* paper_stripes.jpg in Resources */,
+				16130EA618367BA300175310 /* candy-stripe2.png in Resources */,
 				16063DC4182D3689001811DD /* candy-stripe1.jpg in Resources */,
 				161B8F62182BFA600069A50A /* Salata_Park.jpg in Resources */,
 				16002B22182843D400452358 /* Credits.rtf in Resources */,
+				16130EAA1836850700175310 /* candy-stripe3.png in Resources */,
 				161B8F5E182BFA600069A50A /* AlMuntazah.jpg in Resources */,
 				161B8F5C182BFA600069A50A /* Al_Khulaifat.jpg in Resources */,
 				16A283E118284E54008B41E0 /* QFlag.png in Resources */,
@@ -548,7 +563,10 @@
 				161B8F59182BFA600069A50A /* Al_Ghanim_Al_Qadeem.jpg in Resources */,
 				161B8F61182BFA600069A50A /* Salata_Park.jpg in Resources */,
 				16D6C58518206A020051DCD3 /* Images.xcassets in Resources */,
+				16130EA318367A7B00175310 /* candy-stripe2.jpg in Resources */,
+				16130EA91836850700175310 /* candy-stripe3.png in Resources */,
 				161B8F5D182BFA600069A50A /* AlMuntazah.jpg in Resources */,
+				16130EA518367BA300175310 /* candy-stripe2.png in Resources */,
 				16063DC3182D3689001811DD /* candy-stripe1.jpg in Resources */,
 				16063DC6182D394D001811DD /* paper_stripes.jpg in Resources */,
 				161B8F57182BFA600069A50A /* Al_Bidda_Park.jpg in Resources */,

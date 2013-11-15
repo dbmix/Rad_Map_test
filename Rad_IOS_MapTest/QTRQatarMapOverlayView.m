@@ -20,6 +20,7 @@
     self = [super initWithOverlay:overlay];
     if (self) {
         _overlayImage = overlayImage;
+
     }
 
     return self;

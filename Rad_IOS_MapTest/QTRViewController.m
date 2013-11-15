@@ -28,7 +28,7 @@
 @property (strong, nonatomic) MKPolygonRenderer *polyRender;
 @property (strong, nonatomic) Qatar *qatar;
 @property (strong, nonatomic) BUTTON *QTRFlag;
-@property (strong, nonatomic) QTRStripesMapOverlay *flagOverlay;  //change this to QTRQatarMapOverlay for flag image
+@property (strong, nonatomic) QTRQatarMapOverlay *flagOverlay;  //change this to QTRQatarMapOverlay for flag image or QTRStripesMapOverlay for striping experiment
 @property (strong, nonatomic) BUTTON *Doha;
 @property (strong, nonatomic) NSDictionary *viewsDictionary;
 
@@ -198,7 +198,7 @@ bool mappingDoha = NO;
     self.demoPolygon = [MKPolygon polygonWithCoordinates:ovrlayCoord count:nmbr];
 
     /*
-        // testing testing
+        // testing testing -  no value appears to be added going down this road
         // start with our position and derive a nice unit for drawing
 
     CLLocationCoordinate2D loc = CLLocationCoordinate2DMake(25.304, 51.26);
@@ -256,8 +256,8 @@ bool mappingDoha = NO;
         graphicOverlay = NO;
         return;
     }
-        //self.flagOverlay = [[QTRQatarMapOverlay alloc] initWithRegion:self.qatar]; //use this for flag version
-    self.flagOverlay = [[QTRStripesMapOverlay alloc] initWithRegion:self.qatar];   // turn this off for flag version
+        self.flagOverlay = [[QTRQatarMapOverlay alloc] initWithRegion:self.qatar]; //use this for flag version
+        //self.flagOverlay = [[QTRStripesMapOverlay alloc] initWithRegion:self.qatar];   // turn this off for flag version
     [self.QTRView addOverlay:self.flagOverlay level:MKOverlayLevelAboveRoads]; // can also insert above Labels
     graphicOverlay = YES;
 }
@@ -315,7 +315,7 @@ bool mappingDoha = NO;
     if (mappingDoha) {
             //        [self.QTRView  setVisibleMapRect:rect animated:YES]; }
         mappingDoha = NO;
-        self.QTRView.camera.altitude *= 1.3;
+        self.QTRView.camera.altitude *= 1.3; // this is jerky. Alternative is to calculate or preset the region to zoom which is probably the way to go since the app is defining the story
     }
 
 }
@@ -330,9 +330,10 @@ bool mappingDoha = NO;
 
 -(MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay{
     if ([overlay isKindOfClass:QTRQatarMapOverlay.class]) {
-        IMAGE *QFlag = [IMAGE imageNamed:@"QFlag"];
+        IMAGE *QFlag = [IMAGE imageNamed:@"candy-stripe3.png"]; //change to 'QFlag' obviously for flag
         QTRQatarMapOverlayView *overlayView = [[QTRQatarMapOverlayView alloc] initWithOverlay:overlay overlayImage:QFlag];
         overlayView.alpha = 0.5;
+        
         return overlayView;
     } else if ([overlay isKindOfClass:QTRStripesMapOverlay.class]) {   ////change this to QTRQatarMapOverlay for flag image
         QTRStripesOverlayView *overlayView = [[QTRStripesOverlayView alloc] initWithOverlay:overlay];
@@ -343,11 +344,11 @@ bool mappingDoha = NO;
     self.polyRender = [[MKPolygonRenderer alloc] initWithOverlay:overlay];
     self.polyRender.strokeColor = strokeColor;
 
-    COLOR *color = [[COLOR alloc] initWithPatternImage:[IMAGE imageNamed:@"paper_stripes.jpg"]];
-        //[color set];
-    self.polyRender.fillColor = color;
+    self.polyRender.fillColor = [COLOR grayColor];
     self.polyRender.alpha = 0.6;
     return self.polyRender;
+
+        // the following worked for putting polyline graphics on the map, but not the background I was looking for
 
    /* MKOverlayPathRenderer *v = nil;
     v = [[MKOverlayPathRenderer alloc] initWithOverlay:overlay];

@@ -7,6 +7,7 @@
 //
 
 #import "QTRStripesOverlayView.h"
+#import "QTRMacros.h"
 
 @implementation QTRStripesOverlayView
 
@@ -138,9 +139,9 @@
 
 void drawStripes (void *info, CGContextRef con) {
         // assume 4 x 4 cell
-    CGContextSetFillColorWithColor(con, [[UIColor redColor] CGColor]);
+    CGContextSetFillColorWithColor(con, [[COLOR redColor] CGColor]);
     CGContextFillRect(con, CGRectMake(0,0,4,4));
-    CGContextSetFillColorWithColor(con, [[UIColor blueColor] CGColor]);
+    CGContextSetFillColorWithColor(con, [[COLOR blueColor] CGColor]);
     CGContextFillRect(con, CGRectMake(0,0,4,2));
 }
 

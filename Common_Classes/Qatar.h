@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
+#import "QTRMacros.h"
 
 
 @interface Qatar : NSObject
@@ -25,7 +26,7 @@
 
 @property (nonatomic, strong) NSString *name;
 
-@property (nonatomic, strong) UIBezierPath *path;
+@property (nonatomic, strong) BEZIERPATH *path;
 
 
 
